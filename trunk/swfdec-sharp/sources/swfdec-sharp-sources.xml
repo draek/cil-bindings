@@ -5,6 +5,10 @@
       <namespace name="Swfdec">
         <!--<dir>/usr/include/swfdec-0.6/swfdec</dir>-->
         <dir>swfdec-0.6/swfdec</dir>
+      </namespace>
+    </library>
+    <library name="swfdec-gtk-0.6">
+      <namespace name="Swfdec">
         <!--<dir>/usr/include/swfdec-0.6/swfdec-gtk</dir>-->
         <dir>swfdec-0.6/swfdec-gtk</dir>
       </namespace>
