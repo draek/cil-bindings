@@ -1,0 +1,29 @@
+<Type Name="AsNative" FullName="Swfdec.AsNative">
+  <TypeSignature Language="C#" Value="public delegate void AsNative(AsContext context, AsObject thisp, uint argc, AsValue argv, AsValue retval);" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="Swfdec.AsContext" />
+    <Parameter Name="thisp" Type="Swfdec.AsObject" />
+    <Parameter Name="argc" Type="System.UInt32" />
+    <Parameter Name="argv" Type="Swfdec.AsValue" />
+    <Parameter Name="retval" Type="Swfdec.AsValue" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">To be added.</param>
+    <param name="thisp">To be added.</param>
+    <param name="argc">To be added.</param>
+    <param name="argv">To be added.</param>
+    <param name="retval">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

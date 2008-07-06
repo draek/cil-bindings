@@ -1,0 +1,986 @@
+<Type Name="Key" FullName="Swfdec.Key">
+  <TypeSignature Language="C#" Value="public enum Key" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="A">
+      <MemberSignature Language="C#" Value="A" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Alt">
+      <MemberSignature Language="C#" Value="Alt" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Apostrophe">
+      <MemberSignature Language="C#" Value="Apostrophe" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="B">
+      <MemberSignature Language="C#" Value="B" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Backslash">
+      <MemberSignature Language="C#" Value="Backslash" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Backspace">
+      <MemberSignature Language="C#" Value="Backspace" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="C">
+      <MemberSignature Language="C#" Value="C" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsLock">
+      <MemberSignature Language="C#" Value="CapsLock" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="Clear" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="Control" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="D">
+      <MemberSignature Language="C#" Value="D" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="E">
+      <MemberSignature Language="C#" Value="E" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="End" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="Enter" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Equal">
+      <MemberSignature Language="C#" Value="Equal" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape">
+      <MemberSignature Language="C#" Value="Escape" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F">
+      <MemberSignature Language="C#" Value="F" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F1">
+      <MemberSignature Language="C#" Value="F1" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F10">
+      <MemberSignature Language="C#" Value="F10" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F11">
+      <MemberSignature Language="C#" Value="F11" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F12">
+      <MemberSignature Language="C#" Value="F12" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F13">
+      <MemberSignature Language="C#" Value="F13" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F14">
+      <MemberSignature Language="C#" Value="F14" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F15">
+      <MemberSignature Language="C#" Value="F15" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F2">
+      <MemberSignature Language="C#" Value="F2" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F3">
+      <MemberSignature Language="C#" Value="F3" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F4">
+      <MemberSignature Language="C#" Value="F4" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F5">
+      <MemberSignature Language="C#" Value="F5" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F6">
+      <MemberSignature Language="C#" Value="F6" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F7">
+      <MemberSignature Language="C#" Value="F7" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F8">
+      <MemberSignature Language="C#" Value="F8" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="F9">
+      <MemberSignature Language="C#" Value="F9" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="G">
+      <MemberSignature Language="C#" Value="G" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Grave">
+      <MemberSignature Language="C#" Value="Grave" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H">
+      <MemberSignature Language="C#" Value="H" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="Help" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Home">
+      <MemberSignature Language="C#" Value="Home" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="I">
+      <MemberSignature Language="C#" Value="I" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="J">
+      <MemberSignature Language="C#" Value="J" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="K">
+      <MemberSignature Language="C#" Value="K" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="L">
+      <MemberSignature Language="C#" Value="L" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftBracket">
+      <MemberSignature Language="C#" Value="LeftBracket" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="M">
+      <MemberSignature Language="C#" Value="M" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minus">
+      <MemberSignature Language="C#" Value="Minus" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="N">
+      <MemberSignature Language="C#" Value="N" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num0">
+      <MemberSignature Language="C#" Value="Num0" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num1">
+      <MemberSignature Language="C#" Value="Num1" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num2">
+      <MemberSignature Language="C#" Value="Num2" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num3">
+      <MemberSignature Language="C#" Value="Num3" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num4">
+      <MemberSignature Language="C#" Value="Num4" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num5">
+      <MemberSignature Language="C#" Value="Num5" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num6">
+      <MemberSignature Language="C#" Value="Num6" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num7">
+      <MemberSignature Language="C#" Value="Num7" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num8">
+      <MemberSignature Language="C#" Value="Num8" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Num9">
+      <MemberSignature Language="C#" Value="Num9" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumLock">
+      <MemberSignature Language="C#" Value="NumLock" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad0">
+      <MemberSignature Language="C#" Value="Numpad0" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad1">
+      <MemberSignature Language="C#" Value="Numpad1" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad2">
+      <MemberSignature Language="C#" Value="Numpad2" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad3">
+      <MemberSignature Language="C#" Value="Numpad3" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad4">
+      <MemberSignature Language="C#" Value="Numpad4" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad5">
+      <MemberSignature Language="C#" Value="Numpad5" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad6">
+      <MemberSignature Language="C#" Value="Numpad6" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad7">
+      <MemberSignature Language="C#" Value="Numpad7" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad8">
+      <MemberSignature Language="C#" Value="Numpad8" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numpad9">
+      <MemberSignature Language="C#" Value="Numpad9" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumpadAdd">
+      <MemberSignature Language="C#" Value="NumpadAdd" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumpadDecimal">
+      <MemberSignature Language="C#" Value="NumpadDecimal" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumpadDivide">
+      <MemberSignature Language="C#" Value="NumpadDivide" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumpadMultiply">
+      <MemberSignature Language="C#" Value="NumpadMultiply" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumpadSubtract">
+      <MemberSignature Language="C#" Value="NumpadSubtract" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="O">
+      <MemberSignature Language="C#" Value="O" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="P">
+      <MemberSignature Language="C#" Value="P" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDown">
+      <MemberSignature Language="C#" Value="PageDown" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUp">
+      <MemberSignature Language="C#" Value="PageUp" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Q">
+      <MemberSignature Language="C#" Value="Q" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="R">
+      <MemberSignature Language="C#" Value="R" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightBracket">
+      <MemberSignature Language="C#" Value="RightBracket" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="S">
+      <MemberSignature Language="C#" Value="S" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Semicolon">
+      <MemberSignature Language="C#" Value="Semicolon" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shift">
+      <MemberSignature Language="C#" Value="Shift" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Slash">
+      <MemberSignature Language="C#" Value="Slash" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Space">
+      <MemberSignature Language="C#" Value="Space" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="T">
+      <MemberSignature Language="C#" Value="T" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tab">
+      <MemberSignature Language="C#" Value="Tab" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="U">
+      <MemberSignature Language="C#" Value="U" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="V">
+      <MemberSignature Language="C#" Value="V" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="W">
+      <MemberSignature Language="C#" Value="W" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="X" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="Y" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="Z" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

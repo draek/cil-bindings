@@ -1,0 +1,132 @@
+<Type Name="AsNativeFunction" FullName="Swfdec.AsNativeFunction">
+  <TypeSignature Language="C#" Value="public class AsNativeFunction : Swfdec.AsFunction" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Swfdec.AsFunction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsNativeFunction (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="gtype" Type="GLib.GType" />
+      </Parameters>
+      <Docs>
+        <param name="gtype">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsNativeFunction (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsNativeFunction (Swfdec.AsContext context, string name, Swfdec.AsNative native, uint min_args, Swfdec.AsObject prototype);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="context" Type="Swfdec.AsContext" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="native" Type="Swfdec.AsNative" />
+        <Parameter Name="min_args" Type="System.UInt32" />
+        <Parameter Name="prototype" Type="Swfdec.AsObject" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="native">To be added.</param>
+        <param name="min_args">To be added.</param>
+        <param name="prototype">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checkv">
+      <MemberSignature Language="C#" Value="public static bool Checkv (Swfdec.AsContext cx, Swfdec.AsObject objekt, GLib.GType type, IntPtr result, uint argc, Swfdec.AsValue argv, string args, IntPtr varargs);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cx" Type="Swfdec.AsContext" />
+        <Parameter Name="objekt" Type="Swfdec.AsObject" />
+        <Parameter Name="type" Type="GLib.GType" />
+        <Parameter Name="result" Type="System.IntPtr" />
+        <Parameter Name="argc" Type="System.UInt32" />
+        <Parameter Name="argv" Type="Swfdec.AsValue" />
+        <Parameter Name="args" Type="System.String" />
+        <Parameter Name="varargs" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="cx">To be added.</param>
+        <param name="objekt">To be added.</param>
+        <param name="type">To be added.</param>
+        <param name="result">To be added.</param>
+        <param name="argc">To be added.</param>
+        <param name="argv">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="varargs">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructType">
+      <MemberSignature Language="C#" Value="public GLib.GType ConstructType { set; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public GLib.GType ObjectType { set; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

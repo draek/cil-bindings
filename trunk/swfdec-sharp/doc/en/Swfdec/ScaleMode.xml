@@ -1,0 +1,56 @@
+<Type Name="ScaleMode" FullName="Swfdec.ScaleMode">
+  <TypeSignature Language="C#" Value="public enum ScaleMode" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExactFit">
+      <MemberSignature Language="C#" Value="ExactFit" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoBorder">
+      <MemberSignature Language="C#" Value="NoBorder" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowAll">
+      <MemberSignature Language="C#" Value="ShowAll" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

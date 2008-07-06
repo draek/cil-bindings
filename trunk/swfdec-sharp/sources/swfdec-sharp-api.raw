@@ -1,0 +1,1424 @@
+<?xml version="1.0"?>
+<api>
+  <!--
+
+        This file was automatically generated.
+        Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
+
+-->
+  <namespace name="Swfdec" library="swfdec-1.0">
+    <enum name="Alignment" cname="SwfdecAlignment" type="enum">
+      <member cname="SWFDEC_ALIGNMENT_TOP_LEFT" name="TopLeft" />
+      <member cname="SWFDEC_ALIGNMENT_TOP" name="Top" />
+      <member cname="SWFDEC_ALIGNMENT_TOP_RIGHT" name="TopRight" />
+      <member cname="SWFDEC_ALIGNMENT_LEFT" name="Left" />
+      <member cname="SWFDEC_ALIGNMENT_CENTER" name="Center" />
+      <member cname="SWFDEC_ALIGNMENT_RIGHT" name="Right" />
+      <member cname="SWFDEC_ALIGNMENT_BOTTOM_LEFT" name="BottomLeft" />
+      <member cname="SWFDEC_ALIGNMENT_BOTTOM" name="Bottom" />
+      <member cname="SWFDEC_ALIGNMENT_BOTTOM_RIGHT" name="BottomRight" />
+    </enum>
+    <enum name="AsContextState" cname="SwfdecAsContextState" type="enum">
+      <member cname="SWFDEC_AS_CONTEXT_NEW" name="New" />
+      <member cname="SWFDEC_AS_CONTEXT_RUNNING" name="Running" />
+      <member cname="SWFDEC_AS_CONTEXT_INTERRUPTED" name="Interrupted" />
+      <member cname="SWFDEC_AS_CONTEXT_ABORTED" name="Aborted" />
+    </enum>
+    <enum name="AsDeleteReturn" cname="SwfdecAsDeleteReturn" type="enum">
+      <member cname="SWFDEC_AS_DELETE_NOT_FOUND" name="NotFound" />
+      <member cname="SWFDEC_AS_DELETE_DELETED" name="Deleted" />
+      <member cname="SWFDEC_AS_DELETE_NOT_DELETED" name="NotDeleted" />
+    </enum>
+    <enum name="AsValueType" cname="SwfdecAsValueType" type="enum">
+      <member cname="SWFDEC_AS_TYPE_UNDEFINED" name="Undefined" />
+      <member cname="SWFDEC_AS_TYPE_BOOLEAN" name="Boolean" />
+      <member cname="SWFDEC_AS_TYPE_INT" name="Int" />
+      <member cname="SWFDEC_AS_TYPE_NUMBER" name="Number" />
+      <member cname="SWFDEC_AS_TYPE_STRING" name="String" />
+      <member cname="SWFDEC_AS_TYPE_NULL" name="Null" />
+      <member cname="SWFDEC_AS_TYPE_OBJECT" name="Object" />
+    </enum>
+    <enum name="AsVariableFlag" cname="SwfdecAsVariableFlag" type="enum">
+      <member cname="SWFDEC_AS_TYPE_UNDEFINED" name="Undefined" />
+      <member cname="SWFDEC_AS_TYPE_BOOLEAN" name="Boolean" />
+      <member cname="SWFDEC_AS_TYPE_INT" name="Int" />
+      <member cname="SWFDEC_AS_TYPE_NUMBER" name="Number" />
+      <member cname="SWFDEC_AS_TYPE_STRING" name="String" />
+      <member cname="SWFDEC_AS_TYPE_NULL" name="Null" />
+      <member cname="SWFDEC_AS_TYPE_OBJECT" name="Object" />
+    </enum>
+    <enum name="Key" cname="SwfdecKey" type="enum">
+      <member cname="SWFDEC_KEY_BACKSPACE" name="Backspace" value="8" />
+      <member cname="SWFDEC_KEY_TAB" name="Tab" value="9" />
+      <member cname="SWFDEC_KEY_CLEAR" name="Clear" value="12" />
+      <member cname="SWFDEC_KEY_ENTER" name="Enter" value="13" />
+      <member cname="SWFDEC_KEY_SHIFT" name="Shift" value="16" />
+      <member cname="SWFDEC_KEY_CONTROL" name="Control" value="17" />
+      <member cname="SWFDEC_KEY_ALT" name="Alt" value="18" />
+      <member cname="SWFDEC_KEY_CAPS_LOCK" name="CapsLock" value="20" />
+      <member cname="SWFDEC_KEY_ESCAPE" name="Escape" value="27" />
+      <member cname="SWFDEC_KEY_SPACE" name="Space" value="32" />
+      <member cname="SWFDEC_KEY_PAGE_UP" name="PageUp" value="33" />
+      <member cname="SWFDEC_KEY_PAGE_DOWN" name="PageDown" value="34" />
+      <member cname="SWFDEC_KEY_END" name="End" value="35" />
+      <member cname="SWFDEC_KEY_HOME" name="Home" value="36" />
+      <member cname="SWFDEC_KEY_LEFT" name="Left" value="37" />
+      <member cname="SWFDEC_KEY_UP" name="Up" value="38" />
+      <member cname="SWFDEC_KEY_RIGHT" name="Right" value="39" />
+      <member cname="SWFDEC_KEY_DOWN" name="Down" value="40" />
+      <member cname="SWFDEC_KEY_INSERT" name="Insert" value="45" />
+      <member cname="SWFDEC_KEY_DELETE" name="Delete" value="46" />
+      <member cname="SWFDEC_KEY_HELP" name="Help" value="47" />
+      <member cname="SWFDEC_KEY_0" name="0_" value="48" />
+      <member cname="SWFDEC_KEY_1" name="1_" value="49" />
+      <member cname="SWFDEC_KEY_2" name="Two_" value="50" />
+      <member cname="SWFDEC_KEY_3" name="Three_" value="51" />
+      <member cname="SWFDEC_KEY_4" name="4_" value="52" />
+      <member cname="SWFDEC_KEY_5" name="5_" value="53" />
+      <member cname="SWFDEC_KEY_6" name="6_" value="54" />
+      <member cname="SWFDEC_KEY_7" name="7_" value="55" />
+      <member cname="SWFDEC_KEY_8" name="8_" value="56" />
+      <member cname="SWFDEC_KEY_9" name="9_" value="57" />
+      <member cname="SWFDEC_KEY_A" name="A" value="65" />
+      <member cname="SWFDEC_KEY_B" name="B" value="66" />
+      <member cname="SWFDEC_KEY_C" name="C" value="67" />
+      <member cname="SWFDEC_KEY_D" name="D" value="68" />
+      <member cname="SWFDEC_KEY_E" name="E" value="69" />
+      <member cname="SWFDEC_KEY_F" name="F" value="70" />
+      <member cname="SWFDEC_KEY_G" name="G" value="71" />
+      <member cname="SWFDEC_KEY_H" name="H" value="72" />
+      <member cname="SWFDEC_KEY_I" name="I" value="73" />
+      <member cname="SWFDEC_KEY_J" name="J" value="74" />
+      <member cname="SWFDEC_KEY_K" name="K" value="75" />
+      <member cname="SWFDEC_KEY_L" name="L" value="76" />
+      <member cname="SWFDEC_KEY_M" name="M" value="77" />
+      <member cname="SWFDEC_KEY_N" name="N" value="78" />
+      <member cname="SWFDEC_KEY_O" name="O" value="79" />
+      <member cname="SWFDEC_KEY_P" name="P" value="80" />
+      <member cname="SWFDEC_KEY_Q" name="Q" value="81" />
+      <member cname="SWFDEC_KEY_R" name="R" value="82" />
+      <member cname="SWFDEC_KEY_S" name="S" value="83" />
+      <member cname="SWFDEC_KEY_T" name="T" value="84" />
+      <member cname="SWFDEC_KEY_U" name="U" value="85" />
+      <member cname="SWFDEC_KEY_V" name="V" value="86" />
+      <member cname="SWFDEC_KEY_W" name="W" value="87" />
+      <member cname="SWFDEC_KEY_X" name="X" value="88" />
+      <member cname="SWFDEC_KEY_Y" name="Y" value="89" />
+      <member cname="SWFDEC_KEY_Z" name="Z" value="90" />
+      <member cname="SWFDEC_KEY_NUMPAD_0" name="Numpad0" value="96" />
+      <member cname="SWFDEC_KEY_NUMPAD_1" name="Numpad1" value="97" />
+      <member cname="SWFDEC_KEY_NUMPAD_2" name="Numpad2" value="98" />
+      <member cname="SWFDEC_KEY_NUMPAD_3" name="Numpad3" value="99" />
+      <member cname="SWFDEC_KEY_NUMPAD_4" name="Numpad4" value="100" />
+      <member cname="SWFDEC_KEY_NUMPAD_5" name="Numpad5" value="101" />
+      <member cname="SWFDEC_KEY_NUMPAD_6" name="Numpad6" value="102" />
+      <member cname="SWFDEC_KEY_NUMPAD_7" name="Numpad7" value="103" />
+      <member cname="SWFDEC_KEY_NUMPAD_8" name="Numpad8" value="104" />
+      <member cname="SWFDEC_KEY_NUMPAD_9" name="Numpad9" value="105" />
+      <member cname="SWFDEC_KEY_NUMPAD_MULTIPLY" name="NumpadMultiply" value="106" />
+      <member cname="SWFDEC_KEY_NUMPAD_ADD" name="NumpadAdd" value="107" />
+      <member cname="SWFDEC_KEY_NUMPAD_SUBTRACT" name="NumpadSubtract" value="109" />
+      <member cname="SWFDEC_KEY_NUMPAD_DECIMAL" name="NumpadDecimal" value="110" />
+      <member cname="SWFDEC_KEY_NUMPAD_DIVIDE" name="NumpadDivide" value="111" />
+      <member cname="SWFDEC_KEY_F1" name="F1" value="112" />
+      <member cname="SWFDEC_KEY_F2" name="F2" value="113" />
+      <member cname="SWFDEC_KEY_F3" name="F3" value="114" />
+      <member cname="SWFDEC_KEY_F4" name="F4" value="115" />
+      <member cname="SWFDEC_KEY_F5" name="F5" value="116" />
+      <member cname="SWFDEC_KEY_F6" name="F6" value="117" />
+      <member cname="SWFDEC_KEY_F7" name="F7" value="118" />
+      <member cname="SWFDEC_KEY_F8" name="F8" value="119" />
+      <member cname="SWFDEC_KEY_F9" name="F9" value="120" />
+      <member cname="SWFDEC_KEY_F10" name="F10" value="121" />
+      <member cname="SWFDEC_KEY_F11" name="F11" value="122" />
+      <member cname="SWFDEC_KEY_F12" name="F12" value="123" />
+      <member cname="SWFDEC_KEY_F13" name="F13" value="124" />
+      <member cname="SWFDEC_KEY_F14" name="F14" value="125" />
+      <member cname="SWFDEC_KEY_F15" name="F15" value="126" />
+      <member cname="SWFDEC_KEY_NUM_LOCK" name="NumLock" value="144" />
+      <member cname="SWFDEC_KEY_SEMICOLON" name="Semicolon" value="186" />
+      <member cname="SWFDEC_KEY_EQUAL" name="Equal" value="187" />
+      <member cname="SWFDEC_KEY_MINUS" name="Minus" value="189" />
+      <member cname="SWFDEC_KEY_SLASH" name="Slash" value="191" />
+      <member cname="SWFDEC_KEY_GRAVE" name="Grave" value="192" />
+      <member cname="SWFDEC_KEY_LEFT_BRACKET" name="LeftBracket" value="219" />
+      <member cname="SWFDEC_KEY_BACKSLASH" name="Backslash" value="220" />
+      <member cname="SWFDEC_KEY_RIGHT_BRACKET" name="RightBracket" value="221" />
+      <member cname="SWFDEC_KEY_APOSTROPHE" name="Apostrophe" value="222" />
+    </enum>
+    <enum name="LoaderDataType" cname="SwfdecLoaderDataType" type="enum">
+      <member cname="SWFDEC_LOADER_DATA_UNKNOWN" name="Unknown" />
+      <member cname="SWFDEC_LOADER_DATA_SWF" name="Swf" />
+      <member cname="SWFDEC_LOADER_DATA_FLV" name="Flv" />
+      <member cname="SWFDEC_LOADER_DATA_XML" name="Xml" />
+      <member cname="SWFDEC_LOADER_DATA_TEXT" name="Text" />
+      <member cname="SWFDEC_LOADER_DATA_JPEG" name="Jpeg" />
+      <member cname="SWFDEC_LOADER_DATA_PNG" name="Png" />
+    </enum>
+    <enum name="LoaderRequest" cname="SwfdecLoaderRequest" type="enum">
+      <member cname="SWFDEC_LOADER_REQUEST_DEFAULT" name="Default" />
+      <member cname="SWFDEC_LOADER_REQUEST_GET" name="Get" value="1" />
+      <member cname="SWFDEC_LOADER_REQUEST_POST" name="Post" value="2" />
+    </enum>
+    <enum name="MouseCursor" cname="SwfdecMouseCursor" type="enum">
+      <member cname="SWFDEC_MOUSE_CURSOR_NORMAL" name="Normal" />
+      <member cname="SWFDEC_MOUSE_CURSOR_NONE" name="None" />
+      <member cname="SWFDEC_MOUSE_CURSOR_TEXT" name="Text" />
+      <member cname="SWFDEC_MOUSE_CURSOR_CLICK" name="Click" />
+    </enum>
+    <enum name="ScaleMode" cname="SwfdecScaleMode" type="enum">
+      <member cname="SWFDEC_SCALE_SHOW_ALL" name="ShowAll" />
+      <member cname="SWFDEC_SCALE_NO_BORDER" name="NoBorder" />
+      <member cname="SWFDEC_SCALE_EXACT_FIT" name="ExactFit" />
+      <member cname="SWFDEC_SCALE_NONE" name="None" />
+    </enum>
+    <callback name="AsNative" cname="SwfdecAsNative">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="SwfdecAsContext*" name="context" />
+        <parameter type="SwfdecAsObject*" name="thisp" />
+        <parameter type="guint" name="argc" />
+        <parameter type="SwfdecAsValue*" name="argv" />
+        <parameter type="SwfdecAsValue*" name="retval" />
+      </parameters>
+    </callback>
+    <callback name="AsVariableForeach" cname="SwfdecAsVariableForeach">
+      <return-type type="gboolean" />
+      <parameters>
+        <parameter type="SwfdecAsObject*" name="object" />
+        <parameter type="const-char*" name="variable" />
+        <parameter type="SwfdecAsValue*" name="value" />
+        <parameter type="guint" name="flags" />
+        <parameter type="gpointer" name="data" />
+      </parameters>
+    </callback>
+    <callback name="BufferFreeFunc" cname="SwfdecBufferFreeFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="gpointer*" name="priv" />
+        <parameter type="unsigned-char*" name="data" />
+      </parameters>
+    </callback>
+    <object name="AsArray" cname="SwfdecAsArray" parent="SwfdecAsObject">
+      <field name="Whether" cname="whether to remove elements if length property is changed// disabled internally sometimes to not create extra valueOf callsgboolean		check_length" type="//" />
+      <method name="AppendWithFlags" cname="swfdec_as_array_append_with_flags">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="n" />
+          <parameter type="const-SwfdecAsValue*" name="values" />
+          <parameter type="SwfdecAsVariableFlag" name="flags" />
+        </parameters>
+      </method>
+      <method name="GetLength" cname="swfdec_as_array_get_length">
+        <return-type type="gint32" />
+      </method>
+      <method name="GetType" cname="swfdec_as_array_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetValue" cname="swfdec_as_array_get_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint32" name="idx" />
+          <parameter type="SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="Insert" cname="swfdec_as_array_insert">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint32" name="idx" />
+          <parameter type="SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="InsertWithFlags" cname="swfdec_as_array_insert_with_flags">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint32" name="idx" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+          <parameter type="SwfdecAsVariableFlag" name="flags" />
+        </parameters>
+      </method>
+      <constructor cname="swfdec_as_array_new">
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+        </parameters>
+      </constructor>
+      <method name="Remove" cname="swfdec_as_array_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint32" name="idx" />
+        </parameters>
+      </method>
+      <method name="SetLength" cname="swfdec_as_array_set_length">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint32" name="length" />
+        </parameters>
+      </method>
+      <method name="SetValue" cname="swfdec_as_array_set_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint32" name="idx" />
+          <parameter type="SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+    </object>
+    <object name="AsContext" cname="SwfdecAsContext" parent="GObject">
+      <field name="State" cname="state" type="SwfdecAsContextState" />
+      <field name="Global" cname="global" type="SwfdecAsObject*" />
+      <field name="SwfdecPlayer" cname="SwfdecPlayer is NULL unless a sandbox is in use* /GRand* 		rand" type="In" />
+      <field name="StartTime" cname="start_time" type="GTimeVal" />
+      <field name="MemoryUntilGc" cname="memory_until_gc" type="gsize" />
+      <field name="Memory" cname="memory" type="gsize" />
+      <field name="MemorySinceGc" cname="memory_since_gc" type="gsize" />
+      <field name="Strings" cname="strings" type="GHashTable*" />
+      <field name="Objects" cname="objects" type="GHashTable*" />
+      <field name="Version" cname="version" type="unsigned int" />
+      <field name="CallDepth" cname="call_depth" type="unsigned int" />
+      <field name="Frame" cname="frame" type="SwfdecAsFrame*" />
+      <field name="LastFrame" cname="last_frame" type="SwfdecAsFrame*" />
+      <field name="Exception" cname="exception" type="gboolean" />
+      <field name="ExceptionValue" cname="exception_value" type="SwfdecAsValue" />
+      <field name="Base" cname="base" type="SwfdecAsValue*" />
+      <field name="End" cname="end" type="SwfdecAsValue*" />
+      <field name="Cur" cname="cur" type="SwfdecAsValue*" />
+      <field name="Stack" cname="stack" type="SwfdecAsStack*" />
+      <field name="Function" cname="Function" type="SwfdecAsObject*" />
+      <field name="FunctionPrototype" cname="Function_prototype" type="SwfdecAsObject*" />
+      <field name="Object" cname="Object" type="SwfdecAsObject*" />
+      <field name="ObjectPrototype" cname="Object_prototype" type="SwfdecAsObject*" />
+      <field name="Debugger" cname="debugger" type="SwfdecAsDebugger*" />
+      <method name="Abort" cname="swfdec_as_context_abort">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="reason" />
+        </parameters>
+      </method>
+      <method name="Catch" cname="swfdec_as_context_catch">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="Eval" cname="swfdec_as_context_eval">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAsObject*" name="obj" />
+          <parameter type="const-char*" name="str" />
+          <parameter type="SwfdecAsValue*" name="val" />
+        </parameters>
+      </method>
+      <method name="EvalSet" cname="swfdec_as_context_eval_set">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAsObject*" name="obj" />
+          <parameter type="const-char*" name="str" />
+          <parameter type="const-SwfdecAsValue*" name="val" />
+        </parameters>
+      </method>
+      <method name="Gc" cname="swfdec_as_context_gc">
+        <return-type type="void" />
+      </method>
+      <method name="GetFrame" cname="swfdec_as_context_get_frame">
+        <return-type type="SwfdecAsFrame*" />
+      </method>
+      <method name="GetString" cname="swfdec_as_context_get_string">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="const-char*" name="string" />
+        </parameters>
+      </method>
+      <method name="GetTime" cname="swfdec_as_context_get_time">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GTimeVal*" name="tv" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="swfdec_as_context_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GiveString" cname="swfdec_as_context_give_string">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="char*" name="string" />
+        </parameters>
+      </method>
+      <method name="IsAborted" cname="swfdec_as_context_is_aborted">
+        <return-type type="gboolean" />
+      </method>
+      <method name="IsConstructing" cname="swfdec_as_context_is_constructing">
+        <return-type type="gboolean" />
+      </method>
+      <method name="MaybeGc" cname="swfdec_as_context_maybe_gc">
+        <return-type type="void" />
+      </method>
+      <method name="Run" cname="swfdec_as_context_run">
+        <return-type type="void" />
+      </method>
+      <method name="Startup" cname="swfdec_as_context_startup">
+        <return-type type="void" />
+      </method>
+      <method name="Throw" cname="swfdec_as_context_throw">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="TryUseMem" cname="swfdec_as_context_try_use_mem">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gsize" name="bytes" />
+        </parameters>
+      </method>
+      <method name="UnuseMem" cname="swfdec_as_context_unuse_mem">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gsize" name="bytes" />
+        </parameters>
+      </method>
+      <method name="UseMem" cname="swfdec_as_context_use_mem">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gsize" name="bytes" />
+        </parameters>
+      </method>
+    </object>
+    <object name="AsDebugger" cname="SwfdecAsDebugger" parent="GObject">
+      <method name="GetType" cname="swfdec_as_debugger_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="AsFrame" cname="SwfdecAsFrame">
+      <method name="GetFunctionName" cname="swfdec_as_frame_get_function_name">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetNext" cname="swfdec_as_frame_get_next">
+        <return-type type="SwfdecAsFrame*" />
+      </method>
+      <method name="GetScript" cname="swfdec_as_frame_get_script">
+        <return-type type="SwfdecScript*" />
+      </method>
+      <method name="GetThis" cname="swfdec_as_frame_get_this">
+        <return-type type="SwfdecAsObject*" />
+      </method>
+      <method name="GetType" cname="swfdec_as_frame_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="AsFunction" cname="SwfdecAsFunction" parent="SwfdecAsObject">
+      <method name="Call" cname="swfdec_as_function_call">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAsObject*" name="thisp" />
+          <parameter type="guint" name="n_args" />
+          <parameter type="const-SwfdecAsValue*" name="args" />
+          <parameter type="SwfdecAsValue*" name="return_value" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="swfdec_as_function_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="AsNativeFunction" cname="SwfdecAsNativeFunction" parent="SwfdecAsFunction">
+      <field name="Native" cname="native" type="SwfdecAsNative" />
+      <field name="Name" cname="name" type="char*" />
+      <field name="Type" cname="type" type="GType" />
+      <field name="MinArgs" cname="min_args" type="guint" />
+      <field name="ConstructType" cname="construct_type" type="GType" />
+      <field name="ConstructSize" cname="construct_size" type="guint" />
+      <method name="Check" cname="swfdec_as_native_function_check" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="cx" />
+          <parameter type="SwfdecAsObject*" name="object" />
+          <parameter type="GType" name="type" />
+          <parameter type="gpointer*" name="result" />
+          <parameter type="guint" name="argc" />
+          <parameter type="SwfdecAsValue*" name="argv" />
+          <parameter type="const-char*" name="args" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="Checkv" cname="swfdec_as_native_function_checkv" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="cx" />
+          <parameter type="SwfdecAsObject*" name="object" />
+          <parameter type="GType" name="type" />
+          <parameter type="gpointer*" name="result" />
+          <parameter type="guint" name="argc" />
+          <parameter type="SwfdecAsValue*" name="argv" />
+          <parameter type="const-char*" name="args" />
+          <parameter type="va_list" name="varargs" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="swfdec_as_native_function_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_as_native_function_new">
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="const-char*" name="name" />
+          <parameter type="SwfdecAsNative" name="native" />
+          <parameter type="guint" name="min_args" />
+          <parameter type="SwfdecAsObject*" name="prototype" />
+        </parameters>
+      </constructor>
+      <method name="SetConstructType" cname="swfdec_as_native_function_set_construct_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GType" name="type" />
+        </parameters>
+      </method>
+      <method name="SetObjectType" cname="swfdec_as_native_function_set_object_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GType" name="type" />
+        </parameters>
+      </method>
+    </object>
+    <object name="AsObject" cname="SwfdecAsObject" parent="GObject">
+      <field name="Context" cname="context" type="SwfdecAsContext*" />
+      <field name="Prototype" cname="prototype" type="SwfdecAsObject*" />
+      <field name="PrototypeFlags" cname="prototype_flags" type="guint" />
+      <field name="Properties" cname="properties" type="GHashTable*" />
+      <field name="Watches" cname="watches" type="GHashTable*" />
+      <field name="Flags" cname="flags" type="guint8" />
+      <field name="Size" cname="size" type="gsize" />
+      <field name="Interfaces" cname="interfaces" type="GSList*" />
+      <method name="Add" cname="swfdec_as_object_add">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="gsize" name="size" />
+        </parameters>
+      </method>
+      <method name="AddConstructor" cname="swfdec_as_object_add_constructor">
+        <return-type type="SwfdecAsFunction*" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+          <parameter type="GType" name="type" />
+          <parameter type="GType" name="construct_type" />
+          <parameter type="SwfdecAsNative" name="native" />
+          <parameter type="guint" name="min_args" />
+          <parameter type="SwfdecAsObject*" name="prototype" />
+        </parameters>
+      </method>
+      <method name="AddFunction" cname="swfdec_as_object_add_function">
+        <return-type type="SwfdecAsFunction*" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+          <parameter type="GType" name="type" />
+          <parameter type="SwfdecAsNative" name="native" />
+          <parameter type="guint" name="min_args" />
+        </parameters>
+      </method>
+      <method name="AddVariable" cname="swfdec_as_object_add_variable">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+          <parameter type="SwfdecAsFunction*" name="get" />
+          <parameter type="SwfdecAsFunction*" name="set" />
+          <parameter type="SwfdecAsVariableFlag" name="default_flags" />
+        </parameters>
+      </method>
+      <method name="Call" cname="swfdec_as_object_call">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+          <parameter type="guint" name="argc" />
+          <parameter type="SwfdecAsValue*" name="argv" />
+          <parameter type="SwfdecAsValue*" name="return_value" />
+        </parameters>
+      </method>
+      <method name="Create" cname="swfdec_as_object_create" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAsFunction*" name="fun" />
+          <parameter type="guint" name="n_args" />
+          <parameter type="const-SwfdecAsValue*" name="args" />
+          <parameter type="SwfdecAsValue*" name="return_value" />
+        </parameters>
+      </method>
+      <method name="DeleteAllVariables" cname="swfdec_as_object_delete_all_variables">
+        <return-type type="void" />
+      </method>
+      <method name="DeleteVariable" cname="swfdec_as_object_delete_variable">
+        <return-type type="SwfdecAsDeleteReturn" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+        </parameters>
+      </method>
+      <method name="Foreach" cname="swfdec_as_object_foreach">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="SwfdecAsVariableForeach" name="func" />
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="GetDebug" cname="swfdec_as_object_get_debug">
+        <return-type type="char*" />
+      </method>
+      <method name="GetType" cname="swfdec_as_object_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetVariableAndFlags" cname="swfdec_as_object_get_variable_and_flags">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+          <parameter type="SwfdecAsValue*" name="value" />
+          <parameter type="guint*" name="flags" />
+          <parameter type="SwfdecAsObject**" name="pobject" />
+        </parameters>
+      </method>
+      <method name="HasVariable" cname="swfdec_as_object_has_variable">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+        </parameters>
+      </method>
+      <method name="Mark" cname="swfdec_as_object_mark">
+        <return-type type="void" />
+      </method>
+      <constructor cname="swfdec_as_object_new">
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_as_object_new_empty">
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+        </parameters>
+      </constructor>
+      <method name="Resolve" cname="swfdec_as_object_resolve">
+        <return-type type="SwfdecAsObject*" />
+      </method>
+      <method name="Run" cname="swfdec_as_object_run">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecScript*" name="script" />
+        </parameters>
+      </method>
+      <method name="SetConstructor" cname="swfdec_as_object_set_constructor">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAsObject*" name="construct" />
+        </parameters>
+      </method>
+      <method name="SetVariableAndFlags" cname="swfdec_as_object_set_variable_and_flags">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+          <parameter type="guint" name="default_flags" />
+        </parameters>
+      </method>
+      <method name="SetVariableFlags" cname="swfdec_as_object_set_variable_flags">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+          <parameter type="SwfdecAsVariableFlag" name="flags" />
+        </parameters>
+      </method>
+      <method name="UnsetVariableFlags" cname="swfdec_as_object_unset_variable_flags">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="variable" />
+          <parameter type="SwfdecAsVariableFlag" name="flags" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Audio" cname="SwfdecAudio">
+      <method name="GetType" cname="swfdec_audio_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Render" cname="swfdec_audio_render">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint16*" name="dest" />
+          <parameter type="guint" name="start_offset" />
+          <parameter type="guint" name="n_samples" />
+        </parameters>
+      </method>
+    </object>
+    <object name="FileLoader" cname="SwfdecFileLoader" parent="SwfdecLoader">
+      <method name="GetType" cname="swfdec_file_loader_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="GtkLoader" cname="SwfdecGtkLoader">
+      <method name="GetType" cname="swfdec_gtk_loader_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="GtkPlayer" cname="SwfdecGtkPlayer" parent="SwfdecPlayer">
+      <field name="Priv" cname="priv" type="SwfdecGtkPlayerPrivate*" />
+      <method name="GetAudioEnabled" cname="swfdec_gtk_player_get_audio_enabled">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetMissingPluginsWindow" cname="swfdec_gtk_player_get_missing_plugins_window">
+        <return-type type="GdkWindow*" />
+      </method>
+      <method name="GetPlaying" cname="swfdec_gtk_player_get_playing">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetSpeed" cname="swfdec_gtk_player_get_speed">
+        <return-type type="double" />
+      </method>
+      <method name="GetType" cname="swfdec_gtk_player_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_gtk_player_new">
+        <parameters>
+          <parameter type="SwfdecAsDebugger*" name="debugger" />
+        </parameters>
+      </constructor>
+      <method name="SetAudioEnabled" cname="swfdec_gtk_player_set_audio_enabled">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="enabled" />
+        </parameters>
+      </method>
+      <method name="SetMissingPluginsWindow" cname="swfdec_gtk_player_set_missing_plugins_window">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GdkWindow*" name="window" />
+        </parameters>
+      </method>
+      <method name="SetPlaying" cname="swfdec_gtk_player_set_playing">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="playing" />
+        </parameters>
+      </method>
+      <method name="SetSpeed" cname="swfdec_gtk_player_set_speed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="double" name="speed" />
+        </parameters>
+      </method>
+    </object>
+    <object name="GtkSocket" cname="SwfdecGtkSocket">
+      <method name="GetType" cname="swfdec_gtk_socket_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="GtkSystem" cname="SwfdecGtkSystem" parent="SwfdecSystem">
+      <field name="Priv" cname="priv" type="SwfdecGtkSystemPrivate*" />
+      <method name="GetType" cname="swfdec_gtk_system_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_gtk_system_new">
+        <parameters>
+          <parameter type="GdkScreen*" name="screen" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="GtkWidget" cname="SwfdecGtkWidget" parent="GtkWidget">
+      <field name="Priv" cname="priv" type="SwfdecGtkWidgetPrivate*" />
+      <method name="GetInteractive" cname="swfdec_gtk_widget_get_interactive">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetPlayer" cname="swfdec_gtk_widget_get_player">
+        <return-type type="SwfdecPlayer*" />
+      </method>
+      <method name="GetRenderer" cname="swfdec_gtk_widget_get_renderer">
+        <return-type type="cairo_surface_type_t" />
+      </method>
+      <method name="GetType" cname="swfdec_gtk_widget_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_gtk_widget_new">
+        <parameters>
+          <parameter type="SwfdecPlayer*" name="player" />
+        </parameters>
+      </constructor>
+      <method name="SetInteractive" cname="swfdec_gtk_widget_set_interactive">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="interactive" />
+        </parameters>
+      </method>
+      <method name="SetPlayer" cname="swfdec_gtk_widget_set_player">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecPlayer*" name="player" />
+        </parameters>
+      </method>
+      <method name="SetRenderer" cname="swfdec_gtk_widget_set_renderer">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_surface_type_t" name="renderer" />
+        </parameters>
+      </method>
+      <method name="UnsetRenderer" cname="swfdec_gtk_widget_unset_renderer">
+        <return-type type="void" />
+      </method>
+      <method name="UsesRenderer" cname="swfdec_gtk_widget_uses_renderer">
+        <return-type type="gboolean" />
+      </method>
+    </object>
+    <object name="Loader" cname="SwfdecLoader" parent="SwfdecStream">
+      <field name="Url" cname="url" type="SwfdecURL*" />
+      <field name="Size" cname="size" type="glong" />
+      <field name="DataType" cname="data_type" type="SwfdecLoaderDataType" />
+      <method name="DataTypeGetExtension" cname="swfdec_loader_data_type_get_extension" shared="true">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="SwfdecLoaderDataType" name="type" />
+        </parameters>
+      </method>
+      <method name="GetDataType" cname="swfdec_loader_get_data_type">
+        <return-type type="SwfdecLoaderDataType" />
+      </method>
+      <method name="GetLoaded" cname="swfdec_loader_get_loaded">
+        <return-type type="gulong" />
+      </method>
+      <method name="GetSize" cname="swfdec_loader_get_size">
+        <return-type type="glong" />
+      </method>
+      <method name="GetType" cname="swfdec_loader_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetUrl" cname="swfdec_loader_get_url">
+        <return-type type="const-SwfdecURL*" />
+      </method>
+      <method name="SetSize" cname="swfdec_loader_set_size">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gulong" name="size" />
+        </parameters>
+      </method>
+      <method name="SetUrl" cname="swfdec_loader_set_url">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="url" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Player" cname="SwfdecPlayer" parent="SwfdecAsContext">
+      <field name="Priv" cname="priv" type="SwfdecPlayerPrivate*" />
+      <method name="Advance" cname="swfdec_player_advance">
+        <return-type type="gulong" />
+        <parameters>
+          <parameter type="gulong" name="msecs" />
+        </parameters>
+      </method>
+      <method name="GetAlignment" cname="swfdec_player_get_alignment">
+        <return-type type="SwfdecAlignment" />
+      </method>
+      <method name="GetAudio" cname="swfdec_player_get_audio">
+        <return-type type="const-GList*" />
+      </method>
+      <method name="GetBackgroundColor" cname="swfdec_player_get_background_color">
+        <return-type type="guint" />
+      </method>
+      <method name="GetBaseUrl" cname="swfdec_player_get_base_url">
+        <return-type type="const-SwfdecURL*" />
+      </method>
+      <method name="GetDefaultSize" cname="swfdec_player_get_default_size">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint*" name="width" />
+          <parameter type="guint*" name="height" />
+        </parameters>
+      </method>
+      <method name="GetMaximumRuntime" cname="swfdec_player_get_maximum_runtime">
+        <return-type type="gulong" />
+      </method>
+      <method name="GetNextEvent" cname="swfdec_player_get_next_event">
+        <return-type type="glong" />
+      </method>
+      <method name="GetRate" cname="swfdec_player_get_rate">
+        <return-type type="double" />
+      </method>
+      <method name="GetScaleMode" cname="swfdec_player_get_scale_mode">
+        <return-type type="SwfdecScaleMode" />
+      </method>
+      <method name="GetScripting" cname="swfdec_player_get_scripting">
+        <return-type type="SwfdecPlayerScripting*" />
+      </method>
+      <method name="GetSize" cname="swfdec_player_get_size">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="int*" name="width" />
+          <parameter type="int*" name="height" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="swfdec_player_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetUrl" cname="swfdec_player_get_url">
+        <return-type type="const-SwfdecURL*" />
+      </method>
+      <method name="GetVariables" cname="swfdec_player_get_variables">
+        <return-type type="const-char*" />
+      </method>
+      <method name="IsInitialized" cname="swfdec_player_is_initialized">
+        <return-type type="gboolean" />
+      </method>
+      <method name="KeyPress" cname="swfdec_player_key_press">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="guint" name="keycode" />
+          <parameter type="guint" name="character" />
+        </parameters>
+      </method>
+      <method name="KeyRelease" cname="swfdec_player_key_release">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="guint" name="keycode" />
+          <parameter type="guint" name="character" />
+        </parameters>
+      </method>
+      <method name="MouseMove" cname="swfdec_player_mouse_move">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="double" name="x" />
+          <parameter type="double" name="y" />
+        </parameters>
+      </method>
+      <method name="MousePress" cname="swfdec_player_mouse_press">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="double" name="x" />
+          <parameter type="double" name="y" />
+          <parameter type="guint" name="button" />
+        </parameters>
+      </method>
+      <method name="MouseRelease" cname="swfdec_player_mouse_release">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="double" name="x" />
+          <parameter type="double" name="y" />
+          <parameter type="guint" name="button" />
+        </parameters>
+      </method>
+      <constructor cname="swfdec_player_new">
+        <parameters>
+          <parameter type="SwfdecAsDebugger*" name="debugger" />
+        </parameters>
+      </constructor>
+      <method name="Render" cname="swfdec_player_render">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_t*" name="cr" />
+          <parameter type="double" name="x" />
+          <parameter type="double" name="y" />
+          <parameter type="double" name="width" />
+          <parameter type="double" name="height" />
+        </parameters>
+      </method>
+      <method name="RenderAudio" cname="swfdec_player_render_audio">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint16*" name="dest" />
+          <parameter type="guint" name="start_offset" />
+          <parameter type="guint" name="n_samples" />
+        </parameters>
+      </method>
+      <method name="SetAlignment" cname="swfdec_player_set_alignment">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecAlignment" name="align" />
+        </parameters>
+      </method>
+      <method name="SetBackgroundColor" cname="swfdec_player_set_background_color">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="color" />
+        </parameters>
+      </method>
+      <method name="SetBaseUrl" cname="swfdec_player_set_base_url">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-SwfdecURL*" name="url" />
+        </parameters>
+      </method>
+      <method name="SetMaximumRuntime" cname="swfdec_player_set_maximum_runtime">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gulong" name="msecs" />
+        </parameters>
+      </method>
+      <method name="SetScaleMode" cname="swfdec_player_set_scale_mode">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecScaleMode" name="mode" />
+        </parameters>
+      </method>
+      <method name="SetScripting" cname="swfdec_player_set_scripting">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecPlayerScripting*" name="scripting" />
+        </parameters>
+      </method>
+      <method name="SetSize" cname="swfdec_player_set_size">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="int" name="width" />
+          <parameter type="int" name="height" />
+        </parameters>
+      </method>
+      <method name="SetUrl" cname="swfdec_player_set_url">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-SwfdecURL*" name="url" />
+        </parameters>
+      </method>
+      <method name="SetVariables" cname="swfdec_player_set_variables">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="variables" />
+        </parameters>
+      </method>
+    </object>
+    <object name="PlayerScripting" cname="SwfdecPlayerScripting" parent="GObject">
+      <method name="GetType" cname="swfdec_player_scripting_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="Socket" cname="SwfdecSocket" parent="SwfdecStream">
+      <method name="GetType" cname="swfdec_socket_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="Stream" cname="SwfdecStream" parent="GObject">
+      <field name="Priv" cname="priv" type="SwfdecStreamPrivate*" />
+      <method name="Eof" cname="swfdec_stream_eof">
+        <return-type type="void" />
+      </method>
+      <method name="Error" cname="swfdec_stream_error">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="error" printf_format="true" />
+          <parameter ellipsis="true" printf_format_args="true" />
+        </parameters>
+      </method>
+      <method name="Errorv" cname="swfdec_stream_errorv">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="error" />
+          <parameter type="va_list" name="args" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="swfdec_stream_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="IsOpen" cname="swfdec_stream_is_open">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Open" cname="swfdec_stream_open">
+        <return-type type="void" />
+      </method>
+      <method name="Push" cname="swfdec_stream_push">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecBuffer*" name="buffer" />
+        </parameters>
+      </method>
+    </object>
+    <object name="System" cname="SwfdecSystem" parent="GObject">
+      <field name="Debugger" cname="debugger" type="gboolean" />
+      <field name="Manufacturer" cname="manufacturer" type="char*" />
+      <field name="ServerManufacturer" cname="server_manufacturer" type="char*" />
+      <field name="Os" cname="os" type="char*" />
+      <field name="OsType" cname="os_type" type="char*" />
+      <field name="PlayerType" cname="player_type" type="char*" />
+      <field name="Version" cname="version" type="char*" />
+      <field name="Language" cname="language" type="char*" />
+      <field name="ScreenWidth" cname="screen_width" type="guint" />
+      <field name="ScreenHeight" cname="screen_height" type="guint" />
+      <field name="Par" cname="par" type="double" />
+      <field name="Dpi" cname="dpi" type="guint" />
+      <field name="ColorMode" cname="color_mode" type="char*" />
+      <field name="UtcOffset" cname="utc_offset" type="int" />
+      <method name="GetType" cname="swfdec_system_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_system_new" />
+    </object>
+    <struct name="AsScope" cname="SwfdecAsScope" opaque="true" />
+    <struct name="AsStack" cname="SwfdecAsStack" opaque="true" />
+    <struct name="AsStackIterator" cname="SwfdecAsStackIterator">
+      <field name="Stack" cname="stack" type="SwfdecAsStack*" access="private" />
+      <field name="Current" cname="current" type="SwfdecAsValue*" access="private" />
+      <field name="I" cname="i" type="guint" access="private" />
+      <field name="N" cname="n" type="guint" access="private" />
+      <method name="Init" cname="swfdec_as_stack_iterator_init">
+        <return-type type="SwfdecAsValue*" />
+        <parameters>
+          <parameter type="SwfdecAsFrame*" name="frame" />
+        </parameters>
+      </method>
+      <method name="InitArguments" cname="swfdec_as_stack_iterator_init_arguments">
+        <return-type type="SwfdecAsValue*" />
+        <parameters>
+          <parameter type="SwfdecAsFrame*" name="frame" />
+        </parameters>
+      </method>
+      <method name="Next" cname="swfdec_as_stack_iterator_next">
+        <return-type type="SwfdecAsValue*" />
+      </method>
+    </struct>
+    <struct name="AsValue" cname="SwfdecAsValue">
+      <field name="Type" cname="type" type="SwfdecAsValueType" />
+      <field name="Boolean" cname="boolean" type="gboolean" access="private" />
+      <method name="Mark" cname="swfdec_as_value_mark">
+        <return-type type="void" />
+      </method>
+      <method name="ToBoolean" cname="swfdec_as_value_to_boolean" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="ToDebug" cname="swfdec_as_value_to_debug">
+        <return-type type="char*" />
+      </method>
+      <method name="ToInteger" cname="swfdec_as_value_to_integer" shared="true">
+        <return-type type="int" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="ToNumber" cname="swfdec_as_value_to_number" shared="true">
+        <return-type type="double" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="ToObject" cname="swfdec_as_value_to_object" shared="true">
+        <return-type type="SwfdecAsObject*" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="ToPrimitive" cname="swfdec_as_value_to_primitive">
+        <return-type type="void" />
+      </method>
+      <method name="ToString" cname="swfdec_as_value_to_string" shared="true">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="const-SwfdecAsValue*" name="value" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Buffer" cname="SwfdecBuffer" opaque="true">
+      <field name="Data" cname="data" type="unsigned char*" access="public" writeable="true" />
+      <field name="Length" cname="length" type="gsize" access="public" writeable="true" />
+      <field name="RefCount" cname="ref_count" type="int" access="private" />
+      <field name="Free" cname="free" type="SwfdecBufferFreeFunc" access="private" />
+      <field name="Priv" cname="priv" type="gpointer" access="private" />
+      <method name="GetSuper" cname="swfdec_buffer_get_super">
+        <return-type type="SwfdecBuffer*" />
+      </method>
+      <method name="GetType" cname="swfdec_buffer_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_buffer_new">
+        <parameters>
+          <parameter type="gsize" name="size" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_buffer_new0">
+        <parameters>
+          <parameter type="gsize" name="size" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_buffer_new_for_data">
+        <parameters>
+          <parameter type="unsigned-char*" name="data" />
+          <parameter type="gsize" name="size" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_buffer_new_from_file">
+        <parameters>
+          <parameter type="const-char*" name="filename" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_buffer_new_full">
+        <parameters>
+          <parameter type="unsigned-char*" name="data" />
+          <parameter type="gsize" name="size" />
+          <parameter type="SwfdecBufferFreeFunc" name="free_func" />
+          <parameter type="gpointer" name="priv" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_buffer_new_subbuffer">
+        <parameters>
+          <parameter type="SwfdecBuffer*" name="buffer" />
+          <parameter type="gsize" name="offset" />
+          <parameter type="gsize" name="length" />
+        </parameters>
+      </constructor>
+      <method name="Ref" cname="swfdec_buffer_ref">
+        <return-type type="SwfdecBuffer*" />
+      </method>
+      <method name="Unref" cname="swfdec_buffer_unref">
+        <return-type type="void" />
+      </method>
+    </struct>
+    <struct name="BufferQueue" cname="SwfdecBufferQueue" opaque="true">
+      <field name="FirstBuffer" cname="first_buffer" type="GSList*" access="private" />
+      <field name="LastBuffer" cname="last_buffer" type="GSList*" access="private" />
+      <field name="Depth" cname="depth" type="gsize" access="private" />
+      <field name="Offset" cname="offset" type="gsize" access="private" />
+      <field name="RefCount" cname="ref_count" type="int" access="private" />
+      <method name="Clear" cname="swfdec_buffer_queue_clear">
+        <return-type type="void" />
+      </method>
+      <method name="Flush" cname="swfdec_buffer_queue_flush">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gsize" name="n_bytes" />
+        </parameters>
+      </method>
+      <method name="GetDepth" cname="swfdec_buffer_queue_get_depth">
+        <return-type type="gsize" />
+      </method>
+      <method name="GetOffset" cname="swfdec_buffer_queue_get_offset">
+        <return-type type="gsize" />
+      </method>
+      <method name="GetType" cname="swfdec_buffer_queue_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_buffer_queue_new" />
+      <method name="Peek" cname="swfdec_buffer_queue_peek">
+        <return-type type="SwfdecBuffer*" />
+        <parameters>
+          <parameter type="gsize" name="length" />
+        </parameters>
+      </method>
+      <method name="PeekBuffer" cname="swfdec_buffer_queue_peek_buffer">
+        <return-type type="SwfdecBuffer*" />
+      </method>
+      <method name="Pull" cname="swfdec_buffer_queue_pull">
+        <return-type type="SwfdecBuffer*" />
+        <parameters>
+          <parameter type="gsize" name="length" />
+        </parameters>
+      </method>
+      <method name="PullBuffer" cname="swfdec_buffer_queue_pull_buffer">
+        <return-type type="SwfdecBuffer*" />
+      </method>
+      <method name="Push" cname="swfdec_buffer_queue_push">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecBuffer*" name="buffer" />
+        </parameters>
+      </method>
+      <method name="Ref" cname="swfdec_buffer_queue_ref">
+        <return-type type="SwfdecBufferQueue*" />
+      </method>
+      <method name="Unref" cname="swfdec_buffer_queue_unref">
+        <return-type type="void" />
+      </method>
+    </struct>
+    <struct name="Rectangle" cname="SwfdecRectangle">
+      <field name="X" cname="x" type="int" />
+      <field name="Y" cname="y" type="int" />
+      <field name="Width" cname="width" type="int" />
+      <field name="Height" cname="height" type="int" />
+      <method name="Contains" cname="swfdec_rectangle_contains">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-SwfdecRectangle*" name="content" />
+        </parameters>
+      </method>
+      <method name="ContainsPoint" cname="swfdec_rectangle_contains_point">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="int" name="x" />
+          <parameter type="int" name="y" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="swfdec_rectangle_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="InitEmpty" cname="swfdec_rectangle_init_empty">
+        <return-type type="void" />
+      </method>
+      <method name="Intersect" cname="swfdec_rectangle_intersect">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-SwfdecRectangle*" name="a" />
+          <parameter type="const-SwfdecRectangle*" name="b" />
+        </parameters>
+      </method>
+      <method name="IsEmpty" cname="swfdec_rectangle_is_empty">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Union" cname="swfdec_rectangle_union">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-SwfdecRectangle*" name="a" />
+          <parameter type="const-SwfdecRectangle*" name="b" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Script" cname="SwfdecScript" opaque="true">
+      <constructor cname="swfdec_script_new">
+        <parameters>
+          <parameter type="SwfdecBuffer*" name="buffer" />
+          <parameter type="const-char*" name="name" />
+          <parameter type="guint" name="version" />
+        </parameters>
+      </constructor>
+      <method name="Ref" cname="swfdec_script_ref">
+        <return-type type="SwfdecScript*" />
+      </method>
+      <method name="Unref" cname="swfdec_script_unref">
+        <return-type type="void" />
+      </method>
+    </struct>
+    <struct name="URL" cname="SwfdecURL" opaque="true">
+      <method name="Copy" cname="swfdec_url_copy">
+        <return-type type="SwfdecURL*" owned="true" />
+      </method>
+      <method name="Equal" cname="swfdec_url_equal" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gconstpointer" name="a" />
+          <parameter type="gconstpointer" name="b" />
+        </parameters>
+      </method>
+      <method name="FormatForDisplay" cname="swfdec_url_format_for_display">
+        <return-type type="char*" />
+      </method>
+      <method name="Free" cname="swfdec_url_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetHost" cname="swfdec_url_get_host">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetPath" cname="swfdec_url_get_path">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetPort" cname="swfdec_url_get_port">
+        <return-type type="guint" />
+      </method>
+      <method name="GetProtocol" cname="swfdec_url_get_protocol">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetQuery" cname="swfdec_url_get_query">
+        <return-type type="const-char*" />
+      </method>
+      <method name="GetType" cname="swfdec_url_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetUrl" cname="swfdec_url_get_url">
+        <return-type type="const-char*" />
+      </method>
+      <method name="HasProtocol" cname="swfdec_url_has_protocol">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="protocol" />
+        </parameters>
+      </method>
+      <method name="Hash" cname="swfdec_url_hash" shared="true">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="gconstpointer" name="url" />
+        </parameters>
+      </method>
+      <method name="IsLocal" cname="swfdec_url_is_local">
+        <return-type type="gboolean" />
+      </method>
+      <method name="IsParent" cname="swfdec_url_is_parent">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-SwfdecURL*" name="child" />
+        </parameters>
+      </method>
+      <constructor cname="swfdec_url_new">
+        <parameters>
+          <parameter type="const-char*" name="string" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_url_new_components">
+        <parameters>
+          <parameter type="const-char*" name="protocol" />
+          <parameter type="const-char*" name="hostname" />
+          <parameter type="guint" name="port" />
+          <parameter type="const-char*" name="path" />
+          <parameter type="const-char*" name="query" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_url_new_from_input">
+        <parameters>
+          <parameter type="const-char*" name="input" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_url_new_parent">
+        <parameters>
+          <parameter type="const-SwfdecURL*" name="url" />
+        </parameters>
+      </constructor>
+      <constructor cname="swfdec_url_new_relative">
+        <parameters>
+          <parameter type="const-SwfdecURL*" name="url" />
+          <parameter type="const-char*" name="string" />
+        </parameters>
+      </constructor>
+      <method name="PathIsRelative" cname="swfdec_url_path_is_relative" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="path" />
+        </parameters>
+      </method>
+    </struct>
+    <class name="As" cname="SwfdecAs_">
+      <method name="DoubleToInteger" cname="swfdec_as_double_to_integer" shared="true">
+        <return-type type="int" />
+        <parameters>
+          <parameter type="double" name="d" />
+        </parameters>
+      </method>
+      <method name="DoubleToString" cname="swfdec_as_double_to_string" shared="true">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="double" name="d" />
+        </parameters>
+      </method>
+      <method name="IntegerToString" cname="swfdec_as_integer_to_string" shared="true">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="context" />
+          <parameter type="int" name="i" />
+        </parameters>
+      </method>
+      <method name="StrConcat" cname="swfdec_as_str_concat" shared="true">
+        <return-type type="const-char*" />
+        <parameters>
+          <parameter type="SwfdecAsContext*" name="cx" />
+          <parameter type="const-char*" name="s1" />
+          <parameter type="const-char*" name="s2" />
+        </parameters>
+      </method>
+      <method name="StringMark" cname="swfdec_as_string_mark" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-char*" name="string" />
+        </parameters>
+      </method>
+    </class>
+    <class name="Global" cname="SwfdecGlobal">
+      <method name="GtkKeycodeFromHardwareKeycode" cname="swfdec_gtk_keycode_from_hardware_keycode" shared="true">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="guint" name="hardware_keycode" />
+        </parameters>
+      </method>
+      <method name="TimeValGetType" cname="swfdec_time_val_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </class>
+  </namespace>
+</api>

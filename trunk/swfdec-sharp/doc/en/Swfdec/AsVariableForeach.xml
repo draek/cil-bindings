@@ -1,0 +1,28 @@
+<Type Name="AsVariableForeach" FullName="Swfdec.AsVariableForeach">
+  <TypeSignature Language="C#" Value="public delegate bool AsVariableForeach(AsObject objekt, string variable, AsValue value, uint flags);" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="objekt" Type="Swfdec.AsObject" />
+    <Parameter Name="variable" Type="System.String" />
+    <Parameter Name="value" Type="Swfdec.AsValue" />
+    <Parameter Name="flags" Type="System.UInt32" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="objekt">To be added.</param>
+    <param name="variable">To be added.</param>
+    <param name="value">To be added.</param>
+    <param name="flags">To be added.</param>
+    <summary>To be added.</summary>
+    <value>To be added.</value>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<metadata>
+  <!-- Fix invalid named members of the Key enum -->
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='0_']" name="name">Num0</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='1_']" name="name">Num1</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='Two_']" name="name">Num2</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='Three_']" name="name">Num3</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='4_']" name="name">Num4</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='5_']" name="name">Num5</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='6_']" name="name">Num6</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='7_']" name="name">Num7</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='8_']" name="name">Num8</attr>
+  <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='9_']" name="name">Num9</attr>
+
+  <!-- Rename System class -->
+  <attr path="/api/namespace/object[@cname='SwfdecSystem']" name="name">SwfdecSystem</attr>
+
+  <!-- Fix inheriting of some classes -->
+  <attr path="/api/namespace/object[@cname='SwfdecAsFrame']" name="parent">SwfdecAsObject</attr>
+  <attr path="/api/namespace/object[@cname='SwfdecAudio']" name="parent">GObject</attr>
+
+  <!-- These cannot be properties, the get/set methods use different types -->
+  <attr path="/api/namespace/object[@cname='SwfdecLoader']/field[@name='Size']" name="hidden">1</attr>
+  <attr path="/api/namespace/object[@cname='SwfdecLoader']/field[@name='Url']" name="hidden">1</attr>
+</metadata>
+
