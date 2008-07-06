@@ -161,7 +161,6 @@ AM_CONDITIONAL(ENABLE_MONODOC, test "x$enable_monodoc" = "xyes")
 
 AC_CONFIG_FILES([
 	Makefile
-	swfdec-sharp.spec
 	doc/Makefile
 	samples/Makefile
 	sources/Makefile
