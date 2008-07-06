@@ -1,3 +1,3 @@
 <configuration>
-  <dllmap dll="swfdec-0.6" target="libswfdec-0.6@LIB_PREFIX@.1@LIB_SUFFIX@"/>
+  <dllmap dll="swfdec-0.6" target="libswfdec-0.6@LIB_PREFIX@.90@LIB_SUFFIX@"/>
 </configuration>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <gapi-parser-input>
   <api filename="swfdec-sharp-api.raw">
-    <library name="swfdec-1.0">
+    <library name="swfdec-0.6">
       <namespace name="Swfdec">
         <!--<dir>/usr/include/swfdec-0.6/swfdec</dir>-->
         <dir>swfdec-0.6/swfdec</dir>
