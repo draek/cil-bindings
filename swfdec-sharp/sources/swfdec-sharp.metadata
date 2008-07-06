@@ -14,7 +14,6 @@
 
   <!-- Rename System classes -->
   <attr path="/api/namespace/object[@cname='SwfdecSystem']" name="name">SwfdecSystem</attr>
-  <attr path="/api/namespace/object[@cname='SwfdecGtkSystem']" name="name">SwfdecGtkSystem</attr>
 
   <!-- Fix inheriting of some classes -->
   <attr path="/api/namespace/object[@cname='SwfdecAsFrame']" name="parent">SwfdecAsObject</attr>
