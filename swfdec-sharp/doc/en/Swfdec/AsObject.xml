@@ -1,0 +1,413 @@
+<Type Name="AsObject" FullName="Swfdec.AsObject">
+  <TypeSignature Language="C#" Value="public class AsObject : GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsObject (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="gtype" Type="GLib.GType" />
+      </Parameters>
+      <Docs>
+        <param name="gtype">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsObject (Swfdec.AsContext context);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="context" Type="Swfdec.AsContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsObject (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Swfdec.AsContext context, ulong size);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Swfdec.AsContext" />
+        <Parameter Name="size" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="size">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddConstructor">
+      <MemberSignature Language="C#" Value="public Swfdec.AsFunction AddConstructor (string name, GLib.GType type, GLib.GType construct_type, Swfdec.AsNative native, uint min_args, Swfdec.AsObject prototype);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.AsFunction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="GLib.GType" />
+        <Parameter Name="construct_type" Type="GLib.GType" />
+        <Parameter Name="native" Type="Swfdec.AsNative" />
+        <Parameter Name="min_args" Type="System.UInt32" />
+        <Parameter Name="prototype" Type="Swfdec.AsObject" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="type">To be added.</param>
+        <param name="construct_type">To be added.</param>
+        <param name="native">To be added.</param>
+        <param name="min_args">To be added.</param>
+        <param name="prototype">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFunction">
+      <MemberSignature Language="C#" Value="public Swfdec.AsFunction AddFunction (string name, GLib.GType type, Swfdec.AsNative native, uint min_args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.AsFunction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="GLib.GType" />
+        <Parameter Name="native" Type="Swfdec.AsNative" />
+        <Parameter Name="min_args" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="type">To be added.</param>
+        <param name="native">To be added.</param>
+        <param name="min_args">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVariable">
+      <MemberSignature Language="C#" Value="public void AddVariable (string variable, Swfdec.AsFunction get, Swfdec.AsFunction set, Swfdec.AsVariableFlag default_flags);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="get" Type="Swfdec.AsFunction" />
+        <Parameter Name="set" Type="Swfdec.AsFunction" />
+        <Parameter Name="default_flags" Type="Swfdec.AsVariableFlag" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <param name="get">To be added.</param>
+        <param name="set">To be added.</param>
+        <param name="default_flags">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="public void Call (string name, uint argc, Swfdec.AsValue argv, Swfdec.AsValue return_value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="argc" Type="System.UInt32" />
+        <Parameter Name="argv" Type="Swfdec.AsValue" />
+        <Parameter Name="return_value" Type="Swfdec.AsValue" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="argc">To be added.</param>
+        <param name="argv">To be added.</param>
+        <param name="return_value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constructor">
+      <MemberSignature Language="C#" Value="public Swfdec.AsObject Constructor { set; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.AsObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static void Create (Swfdec.AsFunction fun, uint n_args, Swfdec.AsValue args, Swfdec.AsValue return_value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fun" Type="Swfdec.AsFunction" />
+        <Parameter Name="n_args" Type="System.UInt32" />
+        <Parameter Name="args" Type="Swfdec.AsValue" />
+        <Parameter Name="return_value" Type="Swfdec.AsValue" />
+      </Parameters>
+      <Docs>
+        <param name="fun">To be added.</param>
+        <param name="n_args">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="return_value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="public string Debug { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAllVariables">
+      <MemberSignature Language="C#" Value="public void DeleteAllVariables ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteVariable">
+      <MemberSignature Language="C#" Value="public Swfdec.AsDeleteReturn DeleteVariable (string variable);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.AsDeleteReturn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreach">
+      <MemberSignature Language="C#" Value="public bool Foreach (Swfdec.AsVariableForeach func);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="func" Type="Swfdec.AsVariableForeach" />
+      </Parameters>
+      <Docs>
+        <param name="func">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariableAndFlags">
+      <MemberSignature Language="C#" Value="public bool GetVariableAndFlags (string variable, Swfdec.AsValue value, out uint flags, Swfdec.AsObject pobject);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="value" Type="Swfdec.AsValue" />
+        <Parameter Name="flags" Type="System.UInt32&amp;" RefType="out" />
+        <Parameter Name="pobject" Type="Swfdec.AsObject" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <param name="value">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="pobject">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVariable">
+      <MemberSignature Language="C#" Value="public bool HasVariable (string variable);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mark">
+      <MemberSignature Language="C#" Value="public void Mark ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewEmpty">
+      <MemberSignature Language="C#" Value="public static Swfdec.AsObject NewEmpty (Swfdec.AsContext context);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.AsObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Swfdec.AsContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public Swfdec.AsObject Resolve ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Swfdec.AsObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public void Run (Swfdec.Script script);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="Swfdec.Script" />
+      </Parameters>
+      <Docs>
+        <param name="script">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVariableAndFlags">
+      <MemberSignature Language="C#" Value="public void SetVariableAndFlags (string variable, Swfdec.AsValue value, uint default_flags);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="value" Type="Swfdec.AsValue" />
+        <Parameter Name="default_flags" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <param name="value">To be added.</param>
+        <param name="default_flags">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVariableFlags">
+      <MemberSignature Language="C#" Value="public void SetVariableFlags (string variable, Swfdec.AsVariableFlag flags);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="flags" Type="Swfdec.AsVariableFlag" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <param name="flags">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsetVariableFlags">
+      <MemberSignature Language="C#" Value="public void UnsetVariableFlags (string variable, Swfdec.AsVariableFlag flags);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="flags" Type="Swfdec.AsVariableFlag" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <param name="flags">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

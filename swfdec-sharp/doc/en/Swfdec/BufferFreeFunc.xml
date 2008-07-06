@@ -1,0 +1,23 @@
+<Type Name="BufferFreeFunc" FullName="Swfdec.BufferFreeFunc">
+  <TypeSignature Language="C#" Value="public delegate void BufferFreeFunc(IntPtr priv, out byte data);" />
+  <AssemblyInfo>
+    <AssemblyName>swfdec-sharp</AssemblyName>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="priv" Type="System.IntPtr" />
+    <Parameter Name="data" Type="System.Byte&amp;" RefType="out" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="priv">To be added.</param>
+    <param name="data">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

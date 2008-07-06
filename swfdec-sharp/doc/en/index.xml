@@ -1,0 +1,75 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="swfdec-sharp" Version="0.6.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("2008 Paul Burton")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("Swfdec bindings for Mono")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("Swfdec#")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="GtkSharp.SwfdecSharp">
+      <Type Name="ObjectManager" />
+    </Namespace>
+    <Namespace Name="Swfdec">
+      <!--Type Name="WebViewTargetInfo" /-->
+      <Type Name="Alignment" />
+      <Type Name="As" />
+      <Type Name="AsArray" />
+      <Type Name="AsContext" />
+      <Type Name="AsContextState" />
+      <Type Name="AsDebugger" />
+      <Type Name="AsDeleteReturn" />
+      <Type Name="AsFrame" />
+      <Type Name="AsFunction" />
+      <Type Name="AsNative" />
+      <Type Name="AsNativeFunction" />
+      <Type Name="AsObject" />
+      <Type Name="AsScope" />
+      <Type Name="AsStack" />
+      <Type Name="AsStackIterator" />
+      <Type Name="AsValue" />
+      <Type Name="AsValueType" />
+      <Type Name="AsVariableFlag" />
+      <Type Name="AsVariableForeach" />
+      <Type Name="Audio" />
+      <Type Name="Buffer" />
+      <Type Name="BufferFreeFunc" />
+      <Type Name="BufferQueue" />
+      <Type Name="FileLoader" />
+      <Type Name="Global" />
+      <Type Name="GtkLoader" />
+      <Type Name="GtkPlayer" />
+      <Type Name="GtkSocket" />
+      <Type Name="GtkSystem" />
+      <Type Name="GtkWidget" />
+      <Type Name="Key" />
+      <Type Name="Loader" />
+      <Type Name="LoaderDataType" />
+      <Type Name="LoaderRequest" />
+      <Type Name="MouseCursor" />
+      <Type Name="Player" />
+      <Type Name="PlayerScripting" />
+      <Type Name="Rectangle" />
+      <Type Name="ScaleMode" />
+      <Type Name="Script" />
+      <Type Name="Socket" />
+      <Type Name="Stream" />
+      <Type Name="SwfdecSystem" />
+      <Type Name="URL" />
+    </Namespace>
+  </Types>
+  <Title>swfdec-sharp</Title>
+</Overview>
