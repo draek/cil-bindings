@@ -645,118 +645,6 @@
         <return-type type="GType" />
       </method>
     </object>
-    <object name="GtkLoader" cname="SwfdecGtkLoader">
-      <method name="GetType" cname="swfdec_gtk_loader_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-    </object>
-    <object name="GtkPlayer" cname="SwfdecGtkPlayer" parent="SwfdecPlayer">
-      <field name="Priv" cname="priv" type="SwfdecGtkPlayerPrivate*" />
-      <method name="GetAudioEnabled" cname="swfdec_gtk_player_get_audio_enabled">
-        <return-type type="gboolean" />
-      </method>
-      <method name="GetMissingPluginsWindow" cname="swfdec_gtk_player_get_missing_plugins_window">
-        <return-type type="GdkWindow*" />
-      </method>
-      <method name="GetPlaying" cname="swfdec_gtk_player_get_playing">
-        <return-type type="gboolean" />
-      </method>
-      <method name="GetSpeed" cname="swfdec_gtk_player_get_speed">
-        <return-type type="double" />
-      </method>
-      <method name="GetType" cname="swfdec_gtk_player_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-      <constructor cname="swfdec_gtk_player_new">
-        <parameters>
-          <parameter type="SwfdecAsDebugger*" name="debugger" />
-        </parameters>
-      </constructor>
-      <method name="SetAudioEnabled" cname="swfdec_gtk_player_set_audio_enabled">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="gboolean" name="enabled" />
-        </parameters>
-      </method>
-      <method name="SetMissingPluginsWindow" cname="swfdec_gtk_player_set_missing_plugins_window">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="GdkWindow*" name="window" />
-        </parameters>
-      </method>
-      <method name="SetPlaying" cname="swfdec_gtk_player_set_playing">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="gboolean" name="playing" />
-        </parameters>
-      </method>
-      <method name="SetSpeed" cname="swfdec_gtk_player_set_speed">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="double" name="speed" />
-        </parameters>
-      </method>
-    </object>
-    <object name="GtkSocket" cname="SwfdecGtkSocket">
-      <method name="GetType" cname="swfdec_gtk_socket_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-    </object>
-    <object name="GtkSystem" cname="SwfdecGtkSystem" parent="SwfdecSystem">
-      <field name="Priv" cname="priv" type="SwfdecGtkSystemPrivate*" />
-      <method name="GetType" cname="swfdec_gtk_system_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-      <constructor cname="swfdec_gtk_system_new">
-        <parameters>
-          <parameter type="GdkScreen*" name="screen" />
-        </parameters>
-      </constructor>
-    </object>
-    <object name="GtkWidget" cname="SwfdecGtkWidget" parent="GtkWidget">
-      <field name="Priv" cname="priv" type="SwfdecGtkWidgetPrivate*" />
-      <method name="GetInteractive" cname="swfdec_gtk_widget_get_interactive">
-        <return-type type="gboolean" />
-      </method>
-      <method name="GetPlayer" cname="swfdec_gtk_widget_get_player">
-        <return-type type="SwfdecPlayer*" />
-      </method>
-      <method name="GetRenderer" cname="swfdec_gtk_widget_get_renderer">
-        <return-type type="cairo_surface_type_t" />
-      </method>
-      <method name="GetType" cname="swfdec_gtk_widget_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-      <constructor cname="swfdec_gtk_widget_new">
-        <parameters>
-          <parameter type="SwfdecPlayer*" name="player" />
-        </parameters>
-      </constructor>
-      <method name="SetInteractive" cname="swfdec_gtk_widget_set_interactive">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="gboolean" name="interactive" />
-        </parameters>
-      </method>
-      <method name="SetPlayer" cname="swfdec_gtk_widget_set_player">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="SwfdecPlayer*" name="player" />
-        </parameters>
-      </method>
-      <method name="SetRenderer" cname="swfdec_gtk_widget_set_renderer">
-        <return-type type="void" />
-        <parameters>
-          <parameter type="cairo_surface_type_t" name="renderer" />
-        </parameters>
-      </method>
-      <method name="UnsetRenderer" cname="swfdec_gtk_widget_unset_renderer">
-        <return-type type="void" />
-      </method>
-      <method name="UsesRenderer" cname="swfdec_gtk_widget_uses_renderer">
-        <return-type type="gboolean" />
-      </method>
-    </object>
     <object name="Loader" cname="SwfdecLoader" parent="SwfdecStream">
       <field name="Url" cname="url" type="SwfdecURL*" />
       <field name="Size" cname="size" type="glong" />
@@ -1410,14 +1298,130 @@
       </method>
     </class>
     <class name="Global" cname="SwfdecGlobal">
+      <method name="TimeValGetType" cname="swfdec_time_val_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </class>
+  </namespace>
+  <namespace name="Swfdec" library="swfdec-gtk-0.6">
+    <object name="GtkLoader" cname="SwfdecGtkLoader">
+      <method name="GetType" cname="swfdec_gtk_loader_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="GtkPlayer" cname="SwfdecGtkPlayer" parent="SwfdecPlayer">
+      <field name="Priv" cname="priv" type="SwfdecGtkPlayerPrivate*" />
+      <method name="GetAudioEnabled" cname="swfdec_gtk_player_get_audio_enabled">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetMissingPluginsWindow" cname="swfdec_gtk_player_get_missing_plugins_window">
+        <return-type type="GdkWindow*" />
+      </method>
+      <method name="GetPlaying" cname="swfdec_gtk_player_get_playing">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetSpeed" cname="swfdec_gtk_player_get_speed">
+        <return-type type="double" />
+      </method>
+      <method name="GetType" cname="swfdec_gtk_player_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_gtk_player_new">
+        <parameters>
+          <parameter type="SwfdecAsDebugger*" name="debugger" />
+        </parameters>
+      </constructor>
+      <method name="SetAudioEnabled" cname="swfdec_gtk_player_set_audio_enabled">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="enabled" />
+        </parameters>
+      </method>
+      <method name="SetMissingPluginsWindow" cname="swfdec_gtk_player_set_missing_plugins_window">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GdkWindow*" name="window" />
+        </parameters>
+      </method>
+      <method name="SetPlaying" cname="swfdec_gtk_player_set_playing">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="playing" />
+        </parameters>
+      </method>
+      <method name="SetSpeed" cname="swfdec_gtk_player_set_speed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="double" name="speed" />
+        </parameters>
+      </method>
+    </object>
+    <object name="GtkSocket" cname="SwfdecGtkSocket">
+      <method name="GetType" cname="swfdec_gtk_socket_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="GtkSystem" cname="SwfdecGtkSystem" parent="SwfdecSystem">
+      <field name="Priv" cname="priv" type="SwfdecGtkSystemPrivate*" />
+      <method name="GetType" cname="swfdec_gtk_system_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_gtk_system_new">
+        <parameters>
+          <parameter type="GdkScreen*" name="screen" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="GtkWidget" cname="SwfdecGtkWidget" parent="GtkWidget">
+      <field name="Priv" cname="priv" type="SwfdecGtkWidgetPrivate*" />
+      <method name="GetInteractive" cname="swfdec_gtk_widget_get_interactive">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetPlayer" cname="swfdec_gtk_widget_get_player">
+        <return-type type="SwfdecPlayer*" />
+      </method>
+      <method name="GetRenderer" cname="swfdec_gtk_widget_get_renderer">
+        <return-type type="cairo_surface_type_t" />
+      </method>
+      <method name="GetType" cname="swfdec_gtk_widget_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="swfdec_gtk_widget_new">
+        <parameters>
+          <parameter type="SwfdecPlayer*" name="player" />
+        </parameters>
+      </constructor>
+      <method name="SetInteractive" cname="swfdec_gtk_widget_set_interactive">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="interactive" />
+        </parameters>
+      </method>
+      <method name="SetPlayer" cname="swfdec_gtk_widget_set_player">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="SwfdecPlayer*" name="player" />
+        </parameters>
+      </method>
+      <method name="SetRenderer" cname="swfdec_gtk_widget_set_renderer">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="cairo_surface_type_t" name="renderer" />
+        </parameters>
+      </method>
+      <method name="UnsetRenderer" cname="swfdec_gtk_widget_unset_renderer">
+        <return-type type="void" />
+      </method>
+      <method name="UsesRenderer" cname="swfdec_gtk_widget_uses_renderer">
+        <return-type type="gboolean" />
+      </method>
+    </object>
+    <class name="Global" cname="SwfdecGlobal">
       <method name="GtkKeycodeFromHardwareKeycode" cname="swfdec_gtk_keycode_from_hardware_keycode" shared="true">
         <return-type type="guint" />
         <parameters>
           <parameter type="guint" name="hardware_keycode" />
         </parameters>
-      </method>
-      <method name="TimeValGetType" cname="swfdec_time_val_get_type" shared="true">
-        <return-type type="GType" />
       </method>
     </class>
   </namespace>

@@ -12,8 +12,9 @@
   <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='8_']" name="name">Num8</attr>
   <attr path="/api/namespace/enum[@cname='SwfdecKey']/member[@name='9_']" name="name">Num9</attr>
 
-  <!-- Rename System class -->
+  <!-- Rename System classes -->
   <attr path="/api/namespace/object[@cname='SwfdecSystem']" name="name">SwfdecSystem</attr>
+  <attr path="/api/namespace/object[@cname='SwfdecGtkSystem']" name="name">SwfdecGtkSystem</attr>
 
   <!-- Fix inheriting of some classes -->
   <attr path="/api/namespace/object[@cname='SwfdecAsFrame']" name="parent">SwfdecAsObject</attr>
