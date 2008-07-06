@@ -1,24 +1,20 @@
-all:
+TARGETS = GtkTest.exe
 
-#TARGETS = \
-#	funnybrowser.exe
+EXTRA_DIST = GtkTest.cs
 
-#EXTRA_DIST = \
-#	FunnyBrowser.cs
+DEBUGS = $(addsuffix .mdb, $(TARGETS))
 
-#DEBUGS = $(addsuffix .mdb, $(TARGETS))
+assembly=$(ASSEMBLY_NAME).dll
 
-#assembly=$(ASSEMBLY_NAME).dll
+CLEANFILES = $(TARGETS) $(DEBUGS) $(assembly)
 
-#CLEANFILES = $(TARGETS) $(DEBUGS) $(assembly)
+references=-r:../sources/$(assembly) -pkg:gtk-sharp-2.0
 
-#references=-r:../sources/$(assembly) -pkg:gtk-sharp-2.0
+all: $(TARGETS)
 
-#all: $(TARGETS)
+$(assembly): ../sources/$(assembly)
+	cp ../sources/$(ASSEMBLY_NAME).dll $(srcdir)
 
-#$(assembly): ../sources/$(assembly)
-#	cp ../sources/$(ASSEMBLY_NAME).dll $(srcdir)
-
-#funnybrowser.exe: $(assembly) $(srcdir)/FunnyBrowser.cs
-#	$(CSC)  /out:$@ $(references) $(srcdir)/FunnyBrowser.cs
+GtkTest.exe: $(assembly) $(srcdir)/GtkTest.cs
+	$(CSC)  /out:$@ $(references) $(srcdir)/GtkTest.cs
 
