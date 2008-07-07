@@ -1,5 +1,59 @@
 <?xml version="1.0"?>
 <metadata>
+  <attr path="/api/namespace/object[@cname='GstElement']/method[@name='ContinueState']/parameters/parameter[@name='ret']" name="name">r</attr>
+
+  <!-- GstEventType doesn't get parsed properly because of a macro -->
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventUnknown']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventFlushStart']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventFlushStop']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventEos']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventNewsegment']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventTag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventBuffersize']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventQos']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventSeek']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventNavigation']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventLatency']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventCustomUpstream']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventCustomDownstream']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventCustomDownstreamOob']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventCustomBoth']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventCustomBothOob']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='0_']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+  <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='Flag']" />
+
+  <add-node path="/api/namespace/enum[@cname='GstEventType']">
+    <member cname="_GST_EVENT_UNKNOWN" name="EventUnknown" value="0" />
+    <member cname="_GST_EVENT_FLUSH_START" name="EventFlushStart" value="1" />
+    <member cname="_GST_EVENT_FLUSH_STOP" name="EventFlushStop" value="2" />
+    <member cname="_GST_EVENT_EOS" name="EventEos" value="5" />
+    <member cname="_GST_EVENT_NEWSEGMENT" name="EventNewsegment" value="6" />
+    <member cname="_GST_EVENT_TAG" name="EventTag" value="7" />
+    <member cname="_GST_EVENT_BUFFERSIZE" name="EventBuffersize" value="8" />
+    <member cname="_GST_EVENT_QOS" name="EventQos" value="15" />
+    <member cname="_GST_EVENT_SEEK" name="EventSeek" value="16" />
+    <member cname="_GST_EVENT_NAVIGATION" name="EventNavigation" value="17" />
+    <member cname="_GST_EVENT_LATENCY" name="EventLatency" value="18" />
+    <member cname="_GST_EVENT_CUSTOM_UPSTREAM" name="EventCustomUpstream" value="32" />
+    <member cname="_GST_EVENT_CUSTOM_DOWNSTREAM" name="EventCustomDownstream" value="32" />
+    <member cname="_GST_EVENT_CUSTOM_DOWNSTREAM_OOB" name="EventCustomDownstreamOob" value="32" />
+    <member cname="_GST_EVENT_CUSTOM_BOTH" name="EventCustomBoth" value="32" />
+    <member cname="_GST_EVENT_CUSTOM_BOTH_OOB" name="EventCustomBothOob" value="32" />
+  </add-node>
 
 </metadata>
 
