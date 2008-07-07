@@ -36,8 +36,8 @@ get-sources:
 	done
 
 api: get-sources
-	PERLLIB=$(GSTREAMER_PREFIX)/share/perl5 \
-	PATH=$(GSTREAMER_PREFIX)/bin:$$PATH \
+	PERLLIB=$(GLIBSHARP_PREFIX)/share/perl5 \
+	PATH=$(GLIBSHARP_PREFIX)/bin:$$PATH \
 	$(GAPI_PARSER) $(ASSEMBLY_NAME)-sources.xml
 
 $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
@@ -46,12 +46,12 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 	$(GAPI_FIXUP) --api=$(srcdir)/$(API) --metadata=$(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
-	 $(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GSTREAMER_CFLAGS)\
+	 $(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) \
 	 	--outdir=generated --customdir=$(srcdir) \
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
 $(ASSEMBLY_NAME).dll: $(build_sources) generated-stamp
-	$(CSC) -nowarn:169 -unsafe -target:library $(GSTREAMER_LIBS) \
+	$(CSC) -nowarn:169 -unsafe -target:library $(GLIB_SHARP_LIBS) \
 		$(build_sources) generated/*.cs -out:$(ASSEMBLY_NAME).dll
 
 install-data-local:
