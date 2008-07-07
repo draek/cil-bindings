@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <metadata>
   <attr path="/api/namespace/object[@cname='GstElement']/method[@name='ContinueState']/parameters/parameter[@name='ret']" name="name">r</attr>
+  <attr path="/api/namespace/class[@cname='GstFlow_']/method[@name='ToQuark']/parameters/parameter[@name='ret']" name="name">r</attr>
+  <attr path="/api/namespace/class[@cname='GstFlow_']/method[@name='GetName']/parameters/parameter[@name='ret']" name="name">r</attr>
 
   <!-- GstEventType doesn't get parsed properly because of a macro -->
   <remove-node path="/api/namespace/enum[@cname='GstEventType']/member[@name='GstEventUnknown']" />
@@ -54,6 +56,7 @@
     <member cname="_GST_EVENT_CUSTOM_BOTH" name="EventCustomBoth" value="32" />
     <member cname="_GST_EVENT_CUSTOM_BOTH_OOB" name="EventCustomBothOob" value="32" />
   </add-node>
+
 
 </metadata>
 
