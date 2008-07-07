@@ -85,6 +85,13 @@ AC_SUBST(GACUTIL_FLAGS)
 AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
+dnl Check for glib-sharp
+PKG_CHECK_MODULES(GLIB_SHARP, glib-sharp-2.0 >= 1.9.0)
+AC_SUBST(GLIB_SHARP_CFLAGS)
+AC_SUBST(GLIB_SHARP_LIBS)
+glibsharp_prefix=`pkg-config --variable=prefix glib-sharp-2.0`
+AC_SUBST(glibsharp_prefix)
+
 dnl Check for gstreamer
 PKG_CHECK_MODULES(GSTREAMER, gstreamer-0.10)
 AC_SUBST(GSTREAMER_CFLAGS)
