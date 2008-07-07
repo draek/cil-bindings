@@ -34,6 +34,15 @@ get-sources:
 	@for file in gstreamer-0.10/gst/*.h; do                  \
 		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
 	done
+	@for file in gstreamer-0.10/gst/base/*.h; do                  \
+		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
+	done
+	@for file in gstreamer-0.10/gst/audio/*.h; do                  \
+		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
+	done
+	@for file in gstreamer-0.10/gst/video/*.h; do                  \
+		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
+	done
 
 api: get-sources
 	PERLLIB=$(GLIBSHARP_PREFIX)/share/perl5 \
@@ -48,6 +57,7 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 generated-stamp: $(API)
 	 $(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) \
 	 	--outdir=generated --customdir=$(srcdir) \
+		 --glue-filename=generated/glue/glue.c --gluelib-name=gstreamersharp-glue \
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
 $(ASSEMBLY_NAME).dll: $(build_sources) generated-stamp

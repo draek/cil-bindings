@@ -124,7 +124,8 @@ if test "x$GAPI_FIXUP" = "xno"; then
 fi
 AC_SUBST(GAPI_FIXUP)
 
-AC_PATH_PROG(GAPI_CODEGEN, gapi2-codegen, no)
+GAPI_CODEGEN=`pwd`"/gapi2_codegen.exe"
+#AC_PATH_PROG(GAPI_CODEGEN, gapi2-codegen, no)
 if test "x$GAPI_CODEGEN" = "xno"; then
 	AC_MSG_CHECKING(for gapi2_codegen.exe)
 	GAPI_CODEGEN=`which gapi2_codegen.exe 2> /dev/null`
