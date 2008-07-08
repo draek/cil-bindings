@@ -1,4 +1,4 @@
-LIBRARY_NAME=libgstreamer-sharp-glue
+LIBRARY_NAME=libgstreamersharpglue-0.10
 BUILD_DIR = ../
 LIBRARY = $(BUILD_DIR)$(LIBRARY_NAME).so
 CC = gcc
@@ -20,7 +20,7 @@ build_objects = ${build_sources:.c=.o}
 all: $(LIBRARY)
 
 $(LIBRARY): $(build_objects)
-	$(CC) -o $(LIBRARY) $(OBJECTS) $(LDFLAGS)
+	$(CC) -o $(LIBRARY) $(build_objects) $(LDFLAGS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $*.c -o $@
