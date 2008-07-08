@@ -76,7 +76,7 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 generated-stamp: $(API)
 	 $(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) \
 	 	--outdir=generated --customdir=$(srcdir) \
-		--glue-filename=glue/generated.c --gluelib-name=gstreamersharp-glue \
+		--glue-filename=glue/generated.c --gluelib-name=libgstreamer-sharp-glue \
 		--glue-includes=$(glue_includes) \
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 

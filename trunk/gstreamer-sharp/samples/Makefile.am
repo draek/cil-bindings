@@ -1,22 +1,24 @@
 all:
 
-#TARGETS = GtkTest.exe
+TARGETS = PlayBinPlayer.exe
 
-#EXTRA_DIST = GtkTest.cs
+EXTRA_DIST = PlayBinPlayer.cs
 
-#DEBUGS = $(addsuffix .mdb, $(TARGETS))
+DEBUGS = $(addsuffix .mdb, $(TARGETS))
 
-#assembly=$(ASSEMBLY_NAME).dll
+assembly=$(ASSEMBLY_NAME).dll
 
-#CLEANFILES = $(TARGETS) $(DEBUGS) $(assembly)
+CLEANFILES = $(TARGETS) $(DEBUGS) $(assembly)
 
-#references=-r:../sources/$(assembly) -pkg:gtk-sharp-2.0
+references=-r:../sources/$(assembly) -pkg:gtk-sharp-2.0
 
-#all: $(TARGETS)
+all: $(TARGETS)
 
-#$(assembly): ../sources/$(assembly)
-#	cp ../sources/$(ASSEMBLY_NAME).dll $(srcdir)
+$(assembly): ../sources/$(assembly)
+	cp ../sources/$(ASSEMBLY_NAME).dll $(srcdir)
+	cp ../sources/$(ASSEMBLY_NAME).dll.config $(srcdir)
+	cp ../sources/libgstreamer-sharp-glue.so $(srcdir)
 
-#GtkTest.exe: $(assembly) $(srcdir)/GtkTest.cs
-#	$(CSC)  /out:$@ $(references) $(srcdir)/GtkTest.cs
+PlayBinPlayer.exe: $(assembly) $(srcdir)/PlayBinPlayer.cs
+	$(CSC) /out:$@ $(references) $(srcdir)/PlayBinPlayer.cs
 
