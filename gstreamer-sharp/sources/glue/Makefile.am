@@ -1,4 +1,4 @@
-LIBRARY_NAME=gstreamersharp-glue
+LIBRARY_NAME=libgstreamer-sharp-glue
 BUILD_DIR = ../
 LIBRARY = $(BUILD_DIR)$(LIBRARY_NAME).so
 CC = gcc
