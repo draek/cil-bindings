@@ -17,7 +17,7 @@ all: $(TARGETS)
 $(assembly): ../sources/$(assembly)
 	cp ../sources/$(ASSEMBLY_NAME).dll $(srcdir)
 	cp ../sources/$(ASSEMBLY_NAME).dll.config $(srcdir)
-	cp ../sources/libgstreamer-sharp-glue.so $(srcdir)
+	cp ../sources/libgstreamersharpglue-0.10.so $(srcdir)
 
 PlayBinPlayer.exe: $(assembly) $(srcdir)/PlayBinPlayer.cs
 	$(CSC) /out:$@ $(references) $(srcdir)/PlayBinPlayer.cs
