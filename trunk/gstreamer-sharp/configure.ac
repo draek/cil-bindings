@@ -112,7 +112,8 @@ if test "x$GAPI_PARSER" = "xno"; then
 fi
 AC_SUBST(GAPI_PARSER)
 
-AC_PATH_PROG(GAPI_FIXUP, gapi2-fixup, no)
+GAPI_FIXUP=`pwd`"/gapi-fixup.exe"
+#AC_PATH_PROG(GAPI_FIXUP, gapi2-fixup, no)
 if test "x$GAPI_FIXUP" = "xno"; then
 	AC_MSG_CHECKING(for gapi2-fixup.exe)
 	GAPI_FIXUP=`which gapi2-fixup.exe 2> /dev/null`

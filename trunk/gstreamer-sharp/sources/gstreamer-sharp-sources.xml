@@ -3,8 +3,9 @@
   <api filename="gstreamer-sharp-api.raw">
     <library name="gstreamer-0.10">
       <namespace name="Gst">
-        <!--<dir>/usr/include/gstreamer-0.10/gst</dir>-->
         <dir>gstreamer-0.10/gst</dir>
+        <exclude>gstreamer-0.10.3/gst/gstinterface.h</exclude>
+        <exclude>gstreamer-0.10.3/gst/gsturi.h</exclude>
       </namespace>
     </library>
   </api>
