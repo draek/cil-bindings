@@ -1,3 +1,4 @@
+SUBDIRS = . glue
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = $(ASSEMBLY_PC).pc
@@ -5,6 +6,8 @@ pkgconfig_DATA = $(ASSEMBLY_PC).pc
 RAW_API=$(ASSEMBLY_NAME)-api.raw
 API=$(ASSEMBLY_NAME)-api.xml
 METADATA=$(ASSEMBLY_NAME).metadata
+
+glue_includes="gst/gstbin.h gst/gstpipeline.h gst/gstsegment.h"
 
 sources = \
 	DynamicSignal.cs \
@@ -73,7 +76,8 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 generated-stamp: $(API)
 	 $(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) \
 	 	--outdir=generated --customdir=$(srcdir) \
-		 --glue-filename=generated/glue/glue.c --gluelib-name=gstreamersharp-glue \
+		--glue-filename=glue/generated.c --gluelib-name=gstreamersharp-glue \
+		--glue-includes=$(glue_includes) \
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
 $(ASSEMBLY_NAME).dll: $(build_sources) generated-stamp
