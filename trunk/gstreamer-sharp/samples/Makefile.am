@@ -1,6 +1,6 @@
 all:
 
-TARGETS = PlayBinPlayer.exe
+TARGETS = MetaData.exe PlayBinPlayer.exe TypeFind.exe
 
 EXTRA_DIST = PlayBinPlayer.cs
 
@@ -21,4 +21,10 @@ $(assembly): ../sources/$(assembly)
 
 PlayBinPlayer.exe: $(assembly) $(srcdir)/PlayBinPlayer.cs
 	$(CSC) /out:$@ $(references) $(srcdir)/PlayBinPlayer.cs
+
+MetaData.exe: $(assembly) $(srcdir)/MetaData.cs
+	$(CSC) /out:$@ $(references) $(srcdir)/MetaData.cs
+
+TypeFind.exe: $(assembly) $(srcdir)/TypeFind.cs
+	$(CSC) /out:$@ $(references) $(srcdir)/TypeFind.cs
 

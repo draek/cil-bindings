@@ -32,6 +32,54 @@
     <attr path="/api/namespace/enum[@cname='GstPadFlags']/member[@cname='GST_PAD_IN_SETCAPS']" name="value">ObjectFlags.Last &lt;&lt; 3</attr>
     <attr path="/api/namespace/enum[@cname='GstPadFlags']/member[@cname='GST_PAD_BLOCKING']" name="value">ObjectFlags.Last &lt;&lt; 4</attr>
     <attr path="/api/namespace/enum[@cname='GstPadFlags']/member[@cname='GST_PAD_FLAG_LAST']" name="value">ObjectFlags.Last &lt;&lt; 8</attr>
+
+    <!-- Gross hack to remove items added by badly parsed GstEventType enum -->
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='0_']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_UNKNOWN']" name="value">0</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_START']" name="value">19</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_STOP']" name="value">39</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_EOS']" name="value">86</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NEWSEGMENT']" name="value">102</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_TAG']" name="value">118</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_BUFFERSIZE']" name="value">134</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_QOS']" name="value">241</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_SEEK']" name="value">257</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NAVIGATION']" name="value">273</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_LATENCY']" name="value">289</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_UPSTREAM']" name="value">513</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM']" name="value">518</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM_OOB']" name="value">514</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH']" name="value">519</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH_OOB']" name="value">515</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_UNKNOWN']" name="name">Unknown</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_START']" name="name">FlushStart</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_STOP']" name="name">FlushStop</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_EOS']" name="name">Eos</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NEWSEGMENT']" name="name">NewSegment</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_TAG']" name="name">Tag</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_BUFFERSIZE']" name="name">BufferSize</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_QOS']" name="name">Qos</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_SEEK']" name="name">Seek</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NAVIGATION']" name="name">Navigation</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_UPSTREAM']" name="name">Upstream</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM']" name="name">Downstream</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM_OOB']" name="name">DownstreamOob</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH']" name="name">Both</attr>
+    <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH_OOB']" name="name">BothOob</attr>
   <!-- End enums -->
 
   <!-- GstStructure -->
@@ -41,15 +89,24 @@
     <remove-node path="/api/namespace/struct[@cname='GstStructure']/method[@cname='gst_structure_set_valist']" />
   <!-- End GstStructure -->
 
+  <!-- GstTagList -->
+    <attr path="/api/namespace/struct[@name='TagList']/method[@name='CopyValue']/*/*[@name='dest']" name="pass_as">ref</attr>
+    <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetString']/*/*[@name='value']" name="pass_as">out</attr>
+    <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetStringIndex']/*/*[@name='value']" name="pass_as">out</attr>
+    <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetChar']/*/*[@name='value']" name="pass_as">out</attr>
+    <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetCharIndex']/*/*[@name='value']" name="pass_as">out</attr>
+    <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetUlong']/*/*[@name='value']" name="pass_as">out</attr>
+  <!-- End GstTagList -->
+
   <!-- for GstController's object func -->
-  <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_control_properties']" name="hidden">true</attr>
+  <!--attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_control_properties']" name="hidden">true</attr>
   <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_get_controller']" name="hidden">true</attr>
   <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_get_value_array']" name="hidden">true</attr>
   <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_get_value_arrays']" name="hidden">true</attr>
   <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_set_controller']" name="hidden">true</attr>
-  <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_sync_values']" name="hidden">true</attr>
+  <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_sync_values']" name="hidden">true</attr-->
 
-  <attr path="/api/namespace/boxed[@name='Caps']/method[@name='FromString']/return-type" name="owned">true</attr>
+  <attr path="/api/namespace/struct[@name='Caps']/method[@name='FromString']/return-type" name="owned">true</attr>
   <attr path="/api/namespace/object[@name='Buffer']/method[@name='GetCaps']/return-type" name="owned">true</attr>
   <attr path="/api/namespace/object[@name='Object']/field[@name='Refcount']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Pad']/method[@name='GetAllowedCaps']/return-type" name="owned">true</attr>
@@ -61,25 +118,17 @@
   <attr path="/api/namespace/object[@name='Element']/method[@name='LinkMany']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Element']/method[@name='UnlinkMany']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Bin']/method[@name='RemoveMany']" name="hidden">1</attr>
-  <attr path="/api/namespace/object[@name='Message']/method[@cname='gst_message_new_error']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Element']/method[@cname='gst_element_add_pad']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Bin']/field[@name='Children']" name="hidden">1</attr>
 
   <attr path="/api/namespace/object[@name='Bin']/method[@name='Add']" name="hidden">1</attr> 
 
 
-  <attr path="/api/namespace/object[@name='Element']/signal[@name='NoMorePads']" name="name">HasNoMorePads</attr>
   <!-- Hidden as the parameter name conflicts with generated code -->
-  <attr path="/api/namespace/object[@name='Element']/method[@name='ContinueState']/parameters/*[@name='ret']" name="name">state_change_ret</attr>
   <attr path="/api/namespace/object[@name='Element']/method[@name='QueryPosition']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Element']/method[@name='QueryDuration']" name="hidden">1</attr>
-  <attr path="/api/namespace/class[@name='Flow']/method[@name='ToQuark']/parameters/*[@name='ret']" name="name">flow_ret</attr>
-  <attr path="/api/namespace/class[@name='Flow']/method[@name='GetName']/parameters/*[@name='ret']" name="name">get_name_ret</attr>
-  <attr path="/api/namespace/struct[@name='Iterator']/method[@name='Fold']/parameters/*[@name='ret']" name="name">ret_val</attr>
-  <attr path="/api/namespace/object[@name='PadTemplate']/signal[@name='PadCreated']" name="name">HasPadCreated</attr>
   <attr path="/api/namespace/object[@name='PluginFeature']/field[@name='Name']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Index']/field[@cname='resolver']" name="hidden">1</attr>
-  <attr path="/api/namespace/object[@name='Index']/property[@cname='resolver']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='GhostPad']" name="parent">GstPad</attr>
   
   <change-node-type path="/api/namespace/object[@name='Event']">boxed</change-node-type>
@@ -97,8 +146,8 @@
   <remove-node path="/api/namespace/object[@cname='GstMiniObject']" />
 
   <!-- We implement this ourselves, using the overload that keeps the callback from getting GCed -->
-  <attr path="/api/namespace/object[@name='Bus']/method[@name='AddWatch']" name="hidden">true</attr>
-  <attr path="/api/namespace/object[@name='Buffer']/constructor[@name='gst_buffer_new']" name="hidden">true</attr>
+  <attr path="/api/namespace/object[@name='Bus']/method[@name='AddWatch']" name="hidden">1</attr>
+  <attr path="/api/namespace/object[@cname='GstBuffer']/constructor[@cname='gst_buffer_new']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Pad']/method[@name='QueryPosition']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Pad']/method[@name='QueryDuration']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Pad']/field[@cname='block_callback']" name="hidden">1</attr>
@@ -130,55 +179,7 @@
   <attr path="/api/namespace/struct[@name='Iterator']/field[@name='Item']" name="hidden">1</attr>
   <attr path="/api/namespace/struct[@name='Iterator']/field[@name='Resync']" name="hidden">1</attr>
   <attr path="/api/namespace/struct[@name='Iterator']/field[@name='Free']" name="hidden">1</attr>
-  <!-- Gross hack to remove items added by badly parsed GstEventType enum -->
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='0_']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_UNKNOWN']" name="value">0</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_START']" name="value">19</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_STOP']" name="value">39</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_EOS']" name="value">86</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NEWSEGMENT']" name="value">102</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_TAG']" name="value">118</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_BUFFERSIZE']" name="value">134</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_QOS']" name="value">241</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_SEEK']" name="value">257</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NAVIGATION']" name="value">273</attr>
-  <!-- TODO: correct value -->
-  <remove-node path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_LATENCY']" />
-  <!--attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_LATENCY']" name="value">273</attr-->
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_UPSTREAM']" name="value">513</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM']" name="value">518</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM_OOB']" name="value">514</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH']" name="value">519</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH_OOB']" name="value">515</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_UNKNOWN']" name="name">Unknown</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_START']" name="name">FlushStart</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_FLUSH_STOP']" name="name">FlushStop</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_EOS']" name="name">Eos</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NEWSEGMENT']" name="name">NewSegment</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_TAG']" name="name">Tag</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_BUFFERSIZE']" name="name">BufferSize</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_QOS']" name="name">Qos</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_SEEK']" name="name">Seek</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_NAVIGATION']" name="name">Navigation</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_UPSTREAM']" name="name">Upstream</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM']" name="name">Downstream</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_DOWNSTREAM_OOB']" name="name">DownstreamOob</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH']" name="name">Both</attr>
-  <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH_OOB']" name="name">BothOob</attr>
+
   <attr path="/api/namespace/enum[@name='ObjectFlags']/member[@cname='GST_OBJECT_FLAG_LAST']" name="name">Last</attr>
   <attr path="/api/namespace/enum[@name='BufferFlag']/member[@cname='GST_BUFFER_FLAG_READONLY']" name="value">MiniObjectFlags.Readonly</attr>
   <attr path="/api/namespace/enum[@name='BufferFlag']/member[@cname='GST_BUFFER_FLAG_PREROLL']" name="value">MiniObjectFlags.Last &lt;&lt; 0</attr>
@@ -213,12 +214,6 @@
   <attr path="/api/namespace/enum[@name='StateChange']/member[@cname='GST_STATE_CHANGE_PLAYING_TO_PAUSED']" name="value">(State.Playing &lt;&lt; 3) | State.Paused</attr>
   <attr path="/api/namespace/enum[@name='StateChange']/member[@cname='GST_STATE_CHANGE_PAUSED_TO_READY']" name="value">(State.Paused &lt;&lt; 3) | State.Ready</attr>
   <attr path="/api/namespace/enum[@name='StateChange']/member[@cname='GST_STATE_CHANGE_READY_TO_NULL']" name="value">(State.Ready &lt;&lt; 3) | State.Null</attr>
-  <attr path="/api/namespace/boxed[@name='TagList']/method[@name='CopyValue']/*/*[@name='dest']" name="pass_as">ref</attr>
-  <attr path="/api/namespace/boxed[@name='TagList']/method[@name='GetString']/*/*[@name='value']" name="pass_as">out</attr>
-  <attr path="/api/namespace/boxed[@name='TagList']/method[@name='GetStringIndex']/*/*[@name='value']" name="pass_as">out</attr>
-  <attr path="/api/namespace/boxed[@name='TagList']/method[@name='GetChar']/*/*[@name='value']" name="pass_as">out</attr>
-  <attr path="/api/namespace/boxed[@name='TagList']/method[@name='GetCharIndex']/*/*[@name='value']" name="pass_as">out</attr>
-  <attr path="/api/namespace/boxed[@name='TagList']/method[@name='GetUlong']/*/*[@name='value']" name="pass_as">out</attr>
   <!--
   <attr path="/api/namespace/boxed[@name='Plugin']/field[@name='Filename']" name="hidden">1</attr>
   <attr path="/api/namespace/boxed[@name='Structure']/field[@name='Name']" name="hidden">1</attr>
