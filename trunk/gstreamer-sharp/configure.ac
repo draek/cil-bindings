@@ -158,6 +158,7 @@ AC_CONFIG_FILES([
 	doc/Makefile
 	samples/Makefile
 	sources/Makefile
+	sources/glue/Makefile
 	sources/AssemblyInfo.cs
 	sources/gstreamer-sharp-0.10.pc:sources/gstreamer-sharp.pc.in
 	sources/gstreamer-sharp.dll.config
