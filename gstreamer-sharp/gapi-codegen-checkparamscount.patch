@@ -1,0 +1,13 @@
+Index: VirtualMethod.cs
+===================================================================
+--- VirtualMethod.cs	(revision 107358)
++++ VirtualMethod.cs	(working copy)
+@@ -151,7 +151,7 @@
+ 
+ 		public override bool Validate ()
+ 		{
+-			if (!parms.Validate () || !retval.Validate ()) {
++			if (!parms.Validate () || parms.Count == 0 || !retval.Validate ()) {
+ 				Console.Write ("in virtual method " + Name + " ");
+ 				vstate = ValidState.Invalid;
+ 				return false;

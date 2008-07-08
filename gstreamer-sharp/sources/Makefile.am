@@ -6,13 +6,29 @@ RAW_API=$(ASSEMBLY_NAME)-api.raw
 API=$(ASSEMBLY_NAME)-api.xml
 METADATA=$(ASSEMBLY_NAME).metadata
 
-sources = 
-#sources = Class.cs
+sources = \
+	DynamicSignal.cs \
+	BindingHelper.cs \
+	Application.cs \
+	Version.cs \
+	CommonTags.cs \
+	plugins-base/PlayBin.cs \
+	plugins-base/DecodeBin.cs \
+	plugins-base/TypeFindElement.cs
 
 build_sources = AssemblyInfo.cs $(sources)
 
-customs = 
-#customs = App.custom Widget.custom Project.custom WidgetClass.custom
+customs = \
+	Bin.custom \
+	Buffer.custom \
+	Bus.custom \
+	Caps.custom \
+	Clock.custom \
+	Debug.custom \
+	Element.custom \
+	Message.custom \
+	Pad.custom \
+	Object.custom
 
 CLEANFILES = $(ASSEMBLY_NAME).dll generated-stamp generated/*.cs $(API)
 
@@ -34,15 +50,15 @@ get-sources:
 	@for file in gstreamer-0.10/gst/*.h; do                  \
 		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
 	done
-	@for file in gstreamer-0.10/gst/base/*.h; do                  \
-		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
-	done
-	@for file in gstreamer-0.10/gst/audio/*.h; do                  \
-		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
-	done
-	@for file in gstreamer-0.10/gst/video/*.h; do                  \
-		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
-	done
+#	@for file in gstreamer-0.10/gst/base/*.h; do                  \
+#		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
+#	done
+#	@for file in gstreamer-0.10/gst/audio/*.h; do                  \
+#		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
+#	done
+#	@for file in gstreamer-0.10/gst/video/*.h; do                  \
+#		sed -i -e 's,^GSTREAMER_API ,/*GSTREAMER_API*/\r,' $$file; \
+#	done
 
 api: get-sources
 	PERLLIB=$(GLIBSHARP_PREFIX)/share/perl5 \
