@@ -8,11 +8,12 @@ LDFLAGS = -shared -Wl,-soname,$(LIBRARY_NAME).so $(GSTREAMER_LIBS)
 glue_includes="gst/gstbin.h gst/gstpipeline.h gst/gstsegment.h"
 
 sources = \
+	bin.c \
 	buffer.c \
 	clock.c \
+	closure.c \
 	message.c \
-	miniobject.c \
-	bin.c
+	miniobject.c
 
 build_sources = generated.c $(sources)
 build_objects = ${build_sources:.c=.o}

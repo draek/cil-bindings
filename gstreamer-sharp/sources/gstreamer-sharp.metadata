@@ -24,7 +24,7 @@
 
     <attr path="/api/namespace/enum[@cname='GstMessageType']" name="parent">uint</attr>
     <attr path="/api/namespace/enum[@cname='GstMessageType']/member[@name='Unknown']" name="value">0U</attr>
-    <remove-node path="/api/namespace/enum[@cname='GstMessageType']/member[@name='Any']" />
+    <attr path="/api/namespace/enum[@cname='GstMessageType']/member[@name='Any']" name="value">0xffffffff</attr>
 
     <attr path="/api/namespace/enum[@cname='GstPadFlags']/member[@cname='GST_PAD_BLOCKED']" name="value">ObjectFlags.Last &lt;&lt; 0</attr>
     <attr path="/api/namespace/enum[@cname='GstPadFlags']/member[@cname='GST_PAD_FLUSHING']" name="value">ObjectFlags.Last &lt;&lt; 1</attr>
@@ -35,6 +35,7 @@
 
     <!-- Gross hack to remove items added by badly parsed GstEventType enum -->
     <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='0_']" />
+    <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
     <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
     <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
     <remove-node path="/api/namespace/enum[@name='EventType']/member[@name='Flag']" />
@@ -98,6 +99,14 @@
     <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetUlong']/*/*[@name='value']" name="pass_as">out</attr>
   <!-- End GstTagList -->
 
+  <!-- Switch type to Boxed -->
+    <change-node-type path="/api/namespace/struct[@cname='GstCaps']">boxed</change-node-type>
+    <change-node-type path="/api/namespace/struct[@cname='GstIndexEntry']">boxed</change-node-type>
+    <change-node-type path="/api/namespace/struct[@cname='GstSegment']">boxed</change-node-type>
+    <change-node-type path="/api/namespace/struct[@cname='GstStructure']">boxed</change-node-type>
+    <change-node-type path="/api/namespace/struct[@cname='GstTagList']">boxed</change-node-type>
+  <!-- End Switch type to Boxed -->
+
   <!-- for GstController's object func -->
   <!--attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_control_properties']" name="hidden">true</attr>
   <attr path="/api/namespace/object[@name='Object']/method[@cname='gst_object_get_controller']" name="hidden">true</attr>
@@ -120,9 +129,7 @@
   <attr path="/api/namespace/object[@name='Bin']/method[@name='RemoveMany']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Element']/method[@cname='gst_element_add_pad']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='Bin']/field[@name='Children']" name="hidden">1</attr>
-
   <attr path="/api/namespace/object[@name='Bin']/method[@name='Add']" name="hidden">1</attr> 
-
 
   <!-- Hidden as the parameter name conflicts with generated code -->
   <attr path="/api/namespace/object[@name='Element']/method[@name='QueryPosition']" name="hidden">1</attr>
@@ -131,19 +138,24 @@
   <attr path="/api/namespace/object[@name='Index']/field[@cname='resolver']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@name='GhostPad']" name="parent">GstPad</attr>
   
-  <change-node-type path="/api/namespace/object[@name='Event']">boxed</change-node-type>
-  <remove-attr path="/api/namespace/object[@name='Event']" name="parent" />
-  <attr path="/api/namespace/object[@name='Event']" name="opaque">true</attr>
-  <change-node-type path="/api/namespace/object[@name='Buffer']">boxed</change-node-type>
-  <remove-attr path="/api/namespace/object[@name='Buffer']" name="parent" />
-  <attr path="/api/namespace/object[@name='Buffer']" name="opaque">true</attr>
-  <change-node-type path="/api/namespace/object[@name='Message']">boxed</change-node-type>
-  <remove-attr path="/api/namespace/object[@name='Message']" name="parent" />
-  <attr path="/api/namespace/object[@name='Message']" name="opaque">true</attr>
-  <change-node-type path="/api/namespace/object[@name='Query']">boxed</change-node-type>
-  <remove-attr path="/api/namespace/object[@name='Query']" name="parent" />
-  <attr path="/api/namespace/object[@name='Query']" name="opaque">true</attr>
-  <remove-node path="/api/namespace/object[@cname='GstMiniObject']" />
+  <!-- GstMiniObject -->
+    <remove-node path="/api/namespace/object[@cname='GstMiniObject']" />
+    <remove-node path="/api/namespace/callback[@cname='GstMiniObjectCopyFunction']" />
+    <remove-node path="/api/namespace/callback[@cname='GstMiniObjectFinalizeFunction']" />
+
+    <change-node-type path="/api/namespace/object[@name='Event']">boxed</change-node-type>
+    <remove-attr path="/api/namespace/object[@name='Event']" name="parent" />
+    <attr path="/api/namespace/object[@name='Event']" name="opaque">true</attr>
+    <change-node-type path="/api/namespace/object[@name='Buffer']">boxed</change-node-type>
+    <remove-attr path="/api/namespace/object[@name='Buffer']" name="parent" />
+    <attr path="/api/namespace/object[@name='Buffer']" name="opaque">true</attr>
+    <change-node-type path="/api/namespace/object[@name='Message']">boxed</change-node-type>
+    <remove-attr path="/api/namespace/object[@name='Message']" name="parent" />
+    <attr path="/api/namespace/object[@name='Message']" name="opaque">true</attr>
+    <change-node-type path="/api/namespace/object[@name='Query']">boxed</change-node-type>
+    <remove-attr path="/api/namespace/object[@name='Query']" name="parent" />
+    <attr path="/api/namespace/object[@name='Query']" name="opaque">true</attr>
+  <!-- End GstMiniObject -->
 
   <!-- We implement this ourselves, using the overload that keeps the callback from getting GCed -->
   <attr path="/api/namespace/object[@name='Bus']/method[@name='AddWatch']" name="hidden">1</attr>

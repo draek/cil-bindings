@@ -93,7 +93,7 @@ namespace GLib {
 				si.RegisteredHandler = newHandler;
 			}
 			else {
-				IntPtr closure = g_closure_new_simple(16, IntPtr.Zero);
+				IntPtr closure = g_closure_new_simple((int)gstsharp_g_closure_get_size (), IntPtr.Zero);
 				g_closure_set_meta_marshal(closure, (IntPtr) GCHandle.Alloc(k),  marshalHandler);
 				uint signalId = g_signal_connect_closure(o.Handle, name, closure, after); 
 				SignalHandlers.Add(k, new SignalInfo(signalId, closure, handler));
@@ -153,7 +153,9 @@ namespace GLib {
 				}
 			}
 		}
-
+		
+		[DllImport ("gstreamersharpglue-0.10")]
+		static extern uint gstsharp_g_closure_get_size ();
 		
 		[DllImport("gobject-2.0.dll")]
 		static extern IntPtr g_closure_new_simple(int size, IntPtr data);
