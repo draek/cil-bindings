@@ -83,6 +83,10 @@
     <attr path="/api/namespace/enum[@name='EventType']/member[@cname='_GST_EVENT_CUSTOM_BOTH_OOB']" name="name">BothOob</attr>
   <!-- End enums -->
 
+  <!-- GstMessage -->
+    <attr path="/api/namespace/object[@name='Message']/method[@name='ParseTag']/parameters/parameter[@name='tag_list']" name="pass_as">out</attr>
+  <!-- End GstMessage -->
+
   <!-- GstStructure -->
     <attr path="/api/namespace/struct[@cname='GstStructure']" name="opaque">true</attr>
     <remove-node path="/api/namespace/struct[@cname='GstStructure']/field[@name='ParentRefcount']" />

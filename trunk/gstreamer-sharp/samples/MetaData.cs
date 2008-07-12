@@ -54,8 +54,7 @@ public class MetaData
 					message.Dispose();
 					return true;
 				case MessageType.Tag: {
-					TagList new_tags = new TagList();
-					message.ParseTag(new_tags);
+					TagList new_tags = message.ParseTag ();
 					if(tags != null) {
 						tags = tags.Merge(new_tags, TagMergeMode.KeepAll);
 					}
@@ -63,7 +62,7 @@ public class MetaData
 						tags = new_tags;
 					}
 					//tags.Foreach(PrintTag);
-					//new_tags.Dispose();
+					new_tags.Dispose();
 					break;
 				}
 				default:
@@ -87,15 +86,15 @@ public class MetaData
 		source = ElementFactory.Make("filesrc", "source");
 		decodebin = ElementFactory.Make("decodebin", "decodebin");
 
-		if(pipeline == null) Console.Error.WriteLine("Pipeline count not be created");
-		if(source == null) Console.Error.WriteLine("Element filesrc could not be created");
-		if(decodebin == null) Console.Error.WriteLine("Element decodebin coult not be created");
+		if(pipeline == null) Console.WriteLine("Pipeline could not be created");
+		if(source == null) Console.WriteLine("Element filesrc could not be created");
+		if(decodebin == null) Console.WriteLine("Element decodebin could not be created");
 
 		Bin bin = (Bin) pipeline;
 		bin.AddMany(source, decodebin);
-		if(!source.Link(decodebin))
-			Console.Error.WriteLine("filesrc could not be linked with decodebin");
-		decodebin.Dispose();
+		if(!source.Link (decodebin))
+			Console.WriteLine("filesrc could not be linked with decodebin");
+		//decodebin.Dispose();
 	}
 
 	public static void Main(string [] args) 
@@ -104,7 +103,7 @@ public class MetaData
 
 		if(args.Length < 1) 
 		{
-			Console.Error.WriteLine("Please give filenames to read metadata from\n\n");
+			Console.WriteLine("Please give filenames to read metadata from\n\n");
 			return;
 		}
 
@@ -123,11 +122,11 @@ public class MetaData
 
 			if(sret == StateChangeReturn.Async) {
 				if(StateChangeReturn.Success != pipeline.GetState(out state, out pending, Clock.Second * 5)) {
-					Console.Error.WriteLine("State change failed for {0}. Aborting\n", filename);
+					Console.WriteLine("State change failed for {0}. Aborting\n", filename);
 					break;
 				}
 			} else if(sret != StateChangeReturn.Success) {
-				Console.Error.WriteLine("{0} - Could not read file\n", filename);
+				Console.WriteLine("{0} - Could not read file ({1})\n", filename, sret);
 				continue;
 			}
 
@@ -140,20 +139,20 @@ public class MetaData
 				tags.Foreach(new TagForeachFunc(PrintTag));
 				tags.Dispose();
 				tags = null;
-			} else Console.Error.WriteLine("No metadata found for {0}", args[0]);
+			} else Console.WriteLine("No metadata found for {0}", args[0]);
 
 			sret = pipeline.SetState(State.Null);
 
 			if(StateChangeReturn.Async == sret) {
 				if(StateChangeReturn.Failure == pipeline.GetState(out state, out pending, Clock.TimeNone)) {
-					Console.Error.WriteLine("State change failed. Aborting");
+					Console.WriteLine("State change failed. Aborting");
 				}
 			}
 		}
 
 		if(pipeline != null) 
 		{
-			pipeline.Dispose();
+			//pipeline.Dispose();
 		}
 
 	}
