@@ -25,10 +25,10 @@ public static class GstTypefindTest
         pipeline.SetState(State.Paused);
         pipeline.SetState(State.Null);
 		
-		source.Dispose();
-		typefind.Dispose();
-		sink.Dispose();
-        pipeline.Dispose();
+		//source.Dispose();
+		//typefind.Dispose();
+		//sink.Dispose();
+        //pipeline.Dispose();
     }
     
     private static void OnHaveType(object o, GLib.SignalArgs args) 
