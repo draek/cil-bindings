@@ -8,6 +8,9 @@ public class MainWindow : Gtk.Window
 {
 	DrawingArea _da;
 	Pipeline _pipeline;
+	HScale _scale;
+	Label _lbl;
+	bool _updatingScale;
 
 	public static void Main (string[] args)
 	{
@@ -24,23 +27,48 @@ public class MainWindow : Gtk.Window
 		VBox vBox = new VBox ();
 			
 		_da = new DrawingArea ();
+		_da.ModifyBg (Gtk.StateType.Normal, new Gdk.Color (0, 0, 0));
 		_da.SetSizeRequest (400, 300);
 		vBox.PackStart (_da);
+
+		_scale = new HScale (0, 1, 0.01);
+		_scale.DrawValue = false;
+		_scale.ValueChanged += ScaleValueChanged;
+		vBox.PackStart (_scale, false, false, 0);
 			
-		HButtonBox btnBox = new HButtonBox ();
+		HBox hBox = new HBox ();
 		
 		Button btnOpen = new Button ();
 		btnOpen.Label = "Open";
 		btnOpen.Clicked += ButtonOpenClicked;
 		
-		btnBox.Add (btnOpen);
+		hBox.PackStart (btnOpen, false, false, 0);
 		
-		vBox.PackStart (btnBox, false, false, 3);
+		Button btnPlay = new Button ();
+		btnPlay.Label = "Play";
+		btnPlay.Clicked += ButtonPlayClicked;
+		
+		hBox.PackStart (btnPlay, false, false, 0);
+		
+		Button btnPause = new Button ();
+		btnPause.Label = "Pause";
+		btnPause.Clicked += ButtonPauseClicked;
+		
+		hBox.PackStart (btnPause, false, false, 0);
+
+		_lbl = new Label ();
+		_lbl.Text = "00:00 / 00:00";
+
+		hBox.PackEnd (_lbl, false, false, 0);
+		
+		vBox.PackStart (hBox, false, false, 3);
 		
 		Add (vBox);
 	
 		WindowPosition = Gtk.WindowPosition.Center;
 		DeleteEvent += OnDeleteEvent;
+		
+		GLib.Timeout.Add (1000, new GLib.TimeoutHandler (UpdatePos));
 	}
 	
 	void OnDeleteEvent (object sender, DeleteEventArgs args)
@@ -61,7 +89,9 @@ public class MainWindow : Gtk.Window
 				_pipeline.SetState (Gst.State.Null);
 				_pipeline.Dispose ();
 			}
-
+			
+			_scale.Value = 0;
+			
 			_pipeline = new Pipeline (string.Empty);
 
 			Element playbin = ElementFactory.Make ("playbin", "playbin");
@@ -96,6 +126,66 @@ public class MainWindow : Gtk.Window
 		}
 		
 		dialog.Destroy ();
+	}
+	
+	void ButtonPlayClicked (object sender, EventArgs args)
+	{
+		if (_pipeline != null)
+			_pipeline.SetState (Gst.State.Playing);
+	}
+	
+	void ButtonPauseClicked (object sender, EventArgs args)
+	{
+		if (_pipeline != null)
+			_pipeline.SetState (Gst.State.Paused);
+	}
+
+	void ScaleValueChanged (object sender, EventArgs args)
+	{
+		if (_updatingScale)
+			return;
+
+		long duration;
+		
+		if ((_pipeline != null) && _pipeline.QueryDuration (Format.Time, out duration))
+		{
+			long pos = (long)(duration * _scale.Value);
+			//Console.WriteLine ("Seek to {0}/{1} ({2}%)", pos, duration, _scale.Value);
+			
+			_pipeline.SeekSimple (Format.Time, SeekFlags.Flush, pos);
+		}
+	}
+
+	bool UpdatePos ()
+	{
+		long duration, pos;
+		if ((_pipeline != null) && _pipeline.QueryDuration (Format.Time, out duration) && _pipeline.QueryPosition (Format.Time, out pos))
+		{
+			_lbl.Text = string.Format ("{0} / {1}", TimeString (pos), TimeString (duration));
+			
+			_updatingScale = true;
+			_scale.Value = (double)pos / duration;
+			_updatingScale = false;
+		}
+
+		return true;
+	}
+
+	string TimeString (long t)
+	{
+		long secs = t / 1000000000;
+		int mins = (int)(secs / 60);
+		secs = secs - (mins * 60);
+
+		if (mins >= 60)
+		{
+			int hours = (int)(mins / 60);
+			mins = mins - (hours * 60);
+
+			return string.Format ("{0}:{1:d2}:{2:d2}", hours, mins, secs);
+		}
+
+		return string.Format ("{0}:{1:d2}", mins, secs);
 	}
 	
 	[DllImport ("libgdk-x11-2.0")]
