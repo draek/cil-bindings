@@ -20,11 +20,11 @@ $(assembly): ../sources/$(assembly)
 	cp ../sources/libgstreamersharpglue-0.10.so $(srcdir)
 
 PlayBinPlayer.exe: $(assembly) $(srcdir)/PlayBinPlayer.cs
-	$(CSC) /out:$@ $(references) $(srcdir)/PlayBinPlayer.cs
+	$(CSC) /debug /out:$@ $(references) $(srcdir)/PlayBinPlayer.cs
 
 MetaData.exe: $(assembly) $(srcdir)/MetaData.cs
-	$(CSC) /out:$@ $(references) $(srcdir)/MetaData.cs
+	$(CSC) /debug /out:$@ $(references) $(srcdir)/MetaData.cs
 
 TypeFind.exe: $(assembly) $(srcdir)/TypeFind.cs
-	$(CSC) /out:$@ $(references) $(srcdir)/TypeFind.cs
+	$(CSC) /debug /out:$@ $(references) $(srcdir)/TypeFind.cs
 
