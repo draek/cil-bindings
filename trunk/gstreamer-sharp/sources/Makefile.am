@@ -17,7 +17,8 @@ sources = \
 	CommonTags.cs \
 	plugins-base/PlayBin.cs \
 	plugins-base/DecodeBin.cs \
-	plugins-base/TypeFindElement.cs
+	plugins-base/TypeFindElement.cs \
+	plugins-base/XvImageSink.cs
 
 build_sources = AssemblyInfo.cs $(sources)
 
