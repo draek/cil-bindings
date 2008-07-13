@@ -86,7 +86,7 @@ AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
 dnl Check for glib-sharp
-PKG_CHECK_MODULES(GLIB_SHARP, glib-sharp-2.0 >= 1.9.0)
+PKG_CHECK_MODULES(GLIB_SHARP, glib-sharp-2.0 >= 2.12.0)
 AC_SUBST(GLIB_SHARP_CFLAGS)
 AC_SUBST(GLIB_SHARP_LIBS)
 glibsharp_prefix=`pkg-config --variable=prefix glib-sharp-2.0`
