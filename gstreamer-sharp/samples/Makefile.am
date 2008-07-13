@@ -1,6 +1,6 @@
 all:
 
-TARGETS = MetaData.exe PlayBinPlayer.exe TypeFind.exe
+TARGETS = MetaData.exe PlayBinPlayer.exe TypeFind.exe GtkVideoPlayer.exe
 
 EXTRA_DIST = PlayBinPlayer.cs
 
@@ -27,4 +27,7 @@ MetaData.exe: $(assembly) $(srcdir)/MetaData.cs
 
 TypeFind.exe: $(assembly) $(srcdir)/TypeFind.cs
 	$(CSC) /debug /out:$@ $(references) $(srcdir)/TypeFind.cs
+
+GtkVideoPlayer.exe: $(assembly) $(srcdir)/GtkVideoPlayer.cs
+	$(CSC) /debug /out:$@ $(references) $(srcdir)/GtkVideoPlayer.cs
 

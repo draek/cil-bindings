@@ -1,11 +1,16 @@
 <?xml version="1.0"?>
 <gapi-parser-input>
   <api filename="gstreamer-sharp-api.raw">
-    <library name="gstreamer-0.10">
+    <library name="gstreamer-0.10.dll">
       <namespace name="Gst">
         <dir>gstreamer-0.10/gst</dir>
         <exclude>gstreamer-0.10.3/gst/gstinterface.h</exclude>
         <exclude>gstreamer-0.10.3/gst/gsturi.h</exclude>
+      </namespace>
+    </library>
+    <library name="libgstxvimagesink.dll">
+      <namespace name="Gst">
+        <file>gstreamer-0.10/gst/interfaces/xoverlay.h</file>
       </namespace>
     </library>
   </api>

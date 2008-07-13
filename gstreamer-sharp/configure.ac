@@ -112,7 +112,7 @@ if test "x$GAPI_PARSER" = "xno"; then
 fi
 AC_SUBST(GAPI_PARSER)
 
-GAPI_FIXUP="mono "`pwd`"/gapi-fixup.exe"
+GAPI_FIXUP="$MONO "`pwd`"/gapi-fixup.exe"
 #AC_PATH_PROG(GAPI_FIXUP, gapi2-fixup, no)
 if test "x$GAPI_FIXUP" = "xno"; then
 	AC_MSG_CHECKING(for gapi2-fixup.exe)
@@ -125,7 +125,7 @@ if test "x$GAPI_FIXUP" = "xno"; then
 fi
 AC_SUBST(GAPI_FIXUP)
 
-GAPI_CODEGEN="mono "`pwd`"/gapi2_codegen.exe"
+GAPI_CODEGEN="$MONO "`pwd`"/gapi2_codegen.exe"
 #AC_PATH_PROG(GAPI_CODEGEN, gapi2-codegen, no)
 if test "x$GAPI_CODEGEN" = "xno"; then
 	AC_MSG_CHECKING(for gapi2_codegen.exe)

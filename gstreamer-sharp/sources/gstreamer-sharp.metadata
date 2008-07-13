@@ -103,6 +103,18 @@
     <attr path="/api/namespace/struct[@name='TagList']/method[@name='GetUlong']/*/*[@name='value']" name="pass_as">out</attr>
   <!-- End GstTagList -->
 
+  <!-- GstColorBalanceChannel -->
+    <!--attr path="/api/namespace/object[@name='ColorBalanceChannel']" name="parent">GObject</attr-->
+  <!-- End GstColorBalanceChannel -->
+
+  <!-- GstTunerChannel -->
+    <!--attr path="/api/namespace/object[@name='TunerChannel']" name="parent">GObject</attr-->
+  <!-- End GstTunerChannel -->
+
+  <!-- GstTunerNorm -->
+    <!--attr path="/api/namespace/object[@name='TunerNorm']" name="parent">GObject</attr-->
+  <!-- End GstTunerNorm -->
+
   <!-- Switch type to Boxed -->
     <change-node-type path="/api/namespace/struct[@cname='GstCaps']">boxed</change-node-type>
     <change-node-type path="/api/namespace/struct[@cname='GstIndexEntry']">boxed</change-node-type>

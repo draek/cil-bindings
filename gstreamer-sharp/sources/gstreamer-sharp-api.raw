@@ -6,7 +6,7 @@
         Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
 
 -->
-  <namespace name="Gst" library="gstreamer-0.10">
+  <namespace name="Gst" library="gstreamer-0.10.dll">
     <enum name="ActivateMode" cname="GstActivateMode" type="enum">
       <member cname="GST_ACTIVATE_NONE" name="None" />
       <member cname="GST_ACTIVATE_PUSH" name="Push" />
@@ -6107,5 +6107,36 @@
         </parameters>
       </method>
     </class>
+  </namespace>
+  <namespace name="Gst" library="libgstxvimagesink.dll">
+    <interface name="XOverlay" cname="GstXOverlay">
+      <method name="Expose" cname="gst_x_overlay_expose">
+        <return-type type="void" />
+      </method>
+      <method name="GetType" cname="gst_x_overlay_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GotXwindowId" cname="gst_x_overlay_got_xwindow_id">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gulong" name="xwindow_id" />
+        </parameters>
+      </method>
+      <method name="HandleEvents" cname="gst_x_overlay_handle_events">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="handle_events" />
+        </parameters>
+      </method>
+      <method name="PrepareXwindowId" cname="gst_x_overlay_prepare_xwindow_id">
+        <return-type type="void" />
+      </method>
+      <method name="SetXwindowId" cname="gst_x_overlay_set_xwindow_id">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gulong" name="xwindow_id" />
+        </parameters>
+      </method>
+    </interface>
   </namespace>
 </api>
