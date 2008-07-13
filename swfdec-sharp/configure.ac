@@ -86,7 +86,7 @@ AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
 dnl Check for gtk-sharp
-PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp-2.0 >= 1.9.0)
+PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp-2.0 >= 2.10)
 AC_SUBST(GTK_SHARP_CFLAGS)
 AC_SUBST(GTK_SHARP_LIBS)
 gtksharp_prefix=`pkg-config --variable=prefix gtk-sharp-2.0`
