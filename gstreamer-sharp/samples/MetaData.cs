@@ -118,7 +118,7 @@ public class MetaData
 		if (!source.Link (decodebin))
 			Console.WriteLine ("filesrc could not be linked with decodebin");
 		
-		//decodebin.Dispose();
+		//decodebin.Dispose ();
 	}
 
 	public static void Main (string [] args) 
@@ -188,7 +188,7 @@ public class MetaData
 			}
 		}
 
-		//if (pipeline != null) 
-		//	pipeline.Dispose ();
+		if (pipeline != null) 
+			pipeline.Dispose ();
 	}
 }
