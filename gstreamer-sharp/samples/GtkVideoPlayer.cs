@@ -11,6 +11,7 @@ public class MainWindow : Gtk.Window
 	HScale _scale;
 	Label _lbl;
 	bool _updatingScale;
+	bool _pipelineOK;
 
 	public static void Main (string[] args)
 	{
@@ -84,6 +85,8 @@ public class MainWindow : Gtk.Window
 		
 		if (dialog.Run () == (int)ResponseType.Accept)
 		{
+			_pipelineOK = false;
+			
 			if (_pipeline != null)
 			{
 				_pipeline.SetState (Gst.State.Null);
@@ -117,11 +120,12 @@ public class MainWindow : Gtk.Window
 			if (sret == StateChangeReturn.Async)
 			{
 				State state, pending;
-
-				if (StateChangeReturn.Success != _pipeline.GetState (out state, out pending, Clock.Second * 5))
-					Console.WriteLine ("State change failed for {0}\n", dialog.Filename);
+				sret = _pipeline.GetState (out state, out pending, Clock.Second * 5);
 			}
-			else if (sret != StateChangeReturn.Success)
+			
+			if (sret == StateChangeReturn.Success)
+				_pipelineOK = true;
+			else
 				Console.WriteLine ("State change failed for {0} ({1})\n", dialog.Filename, sret);
 		}
 		
@@ -130,13 +134,13 @@ public class MainWindow : Gtk.Window
 	
 	void ButtonPlayClicked (object sender, EventArgs args)
 	{
-		if (_pipeline != null)
+		if ((_pipeline != null) && _pipelineOK)
 			_pipeline.SetState (Gst.State.Playing);
 	}
 	
 	void ButtonPauseClicked (object sender, EventArgs args)
 	{
-		if (_pipeline != null)
+		if ((_pipeline != null) && _pipelineOK)
 			_pipeline.SetState (Gst.State.Paused);
 	}
 
@@ -147,7 +151,7 @@ public class MainWindow : Gtk.Window
 
 		long duration;
 		
-		if ((_pipeline != null) && _pipeline.QueryDuration (Format.Time, out duration))
+		if ((_pipeline != null) && _pipelineOK && _pipeline.QueryDuration (Format.Time, out duration))
 		{
 			long pos = (long)(duration * _scale.Value);
 			//Console.WriteLine ("Seek to {0}/{1} ({2}%)", pos, duration, _scale.Value);
@@ -159,7 +163,9 @@ public class MainWindow : Gtk.Window
 	bool UpdatePos ()
 	{
 		long duration, pos;
-		if ((_pipeline != null) && _pipeline.QueryDuration (Format.Time, out duration) && _pipeline.QueryPosition (Format.Time, out pos))
+		if ((_pipeline != null) && _pipelineOK &&
+		    _pipeline.QueryDuration (Format.Time, out duration) &&
+		    _pipeline.QueryPosition (Format.Time, out pos))
 		{
 			_lbl.Text = string.Format ("{0} / {1}", TimeString (pos), TimeString (duration));
 			
@@ -191,4 +197,3 @@ public class MainWindow : Gtk.Window
 	[DllImport ("libgdk-x11-2.0")]
 	static extern uint gdk_x11_drawable_get_xid (IntPtr handle);
 }
-
